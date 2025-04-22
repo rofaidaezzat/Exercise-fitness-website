@@ -24,17 +24,17 @@ const Navbar = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <ul className="hidden md:flex items-center space-x-4">
-              <li>
+            <ul className="hidden md:flex items-center space-x-5">
+              <li className="hover:text-gray-400 duration-500">
                 <NavLink to="/">Home</NavLink>
               </li>
-              <li>
-                <NavLink to="/exercises">exercises</NavLink>
+              <li className="hover:text-gray-400 duration-500">
+                <NavLink to="/exercises">Exercises</NavLink>
               </li>
-              <li>
+              <li className="hover:text-gray-400 duration-500">
                 <NavLink to="/aboutus">About Us</NavLink>
               </li>
-              <li>
+              <li className="hover:text-gray-400 duration-500">
                 <NavLink to="/contactus">Contact Us</NavLink>
               </li>
             </ul>
@@ -44,15 +44,15 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-4">
             <Link
               to="login"
-              className="px-4 py-2 border-2 border-white rounded-lg text-center w-20"
+              className="px-5 py-1 border-2 bg-white text-black border-white rounded-lg text-center w-21 hover:bg-gray-200 duration-500 hover:border-gray-200 transition-colors"
             >
               Login
             </Link>
             <Link
               to="signup"
-              className="px-4 py-2 rounded-lg w-20 text-center register"
+              className="px-5 py-1 border-2 bg-[#121212] border-black rounded-lg text-center w-21 hover:bg-gray-800 duration-500 hover:border-gray-800 transition-colors"
             >
-              Signup
+              Sign Up
             </Link>
           </div>
 
