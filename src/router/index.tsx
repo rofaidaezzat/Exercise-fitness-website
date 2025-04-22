@@ -6,7 +6,7 @@ import {
 import Home from "../pages";
 import Layout from "../pages/Layout";
 import ContactUs from "../pages/ContactUs";
-import AboutUs from "../pages/AboutUs";
+import AboutUs from "../pages/Aboutus/AboutUs";
 import LogIn from "../pages/LogIn";
 import SignUp from "../pages/SignUp";
 import Exercise from "../pages/Exercise";
