@@ -1,0 +1,70 @@
+.card {
+    width: 190px;
+    height: 254px;
+    background: #07182E;
+    position: relative;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: 
+      transform 0.7s ease,
+      box-shadow 0.5s ease 0.1s; 
+    z-index: 1;
+  }
+  
+  .card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 183, 255, 0.3); /* Glow effect on hover */
+  }
+  
+  /* Background gradient rotation */
+  .card::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 130%;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(36, 68, 212));
+    z-index: -2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition: transform 0.7s ease 0.1s; 
+  }
+  
+  .card:hover::before {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  
+  /* Inner card overlay */
+  .card::after {
+    content: '';
+    position: absolute;
+    inset: 5px;  /*top 5 right 5 left 5 bott 5*/
+    background: #131518;
+    border-radius: 15px;
+    z-index: -1;
+  }
+  
+  /* Content styling (unchanged) */
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+  }
+  
+  .card img {
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .card h2 {
+    color: white;
+    font-size: 1.4em;
+    margin-top: 10px;
+  }
