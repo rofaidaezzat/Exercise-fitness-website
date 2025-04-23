@@ -30,7 +30,7 @@ const LogIn = () => {
             <div className="flex justify-end text-xs text-gray-400 mt-2 mb-3">
               <a
                 rel="noopener noreferrer"
-                href="#"
+                href="/ForgetPass"
                 className="text-gray-100 hover:underline hover:underline-offset-2 hover:decoration-purple-300 text-[14px]"
               >
                 Forgot Password?
