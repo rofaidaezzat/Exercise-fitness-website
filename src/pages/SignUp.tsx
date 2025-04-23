@@ -12,7 +12,7 @@ const SignUp = () => {
               type="text"
               name="username"
               id="username"
-              placeholder="enter your name"
+              placeholder="Enter your username"
               className="bg-white/30 w-full rounded-md border border-gray-700 outline-none px-4 py-3 text-gray-100 placeholder-white "
             />
           </div>
@@ -24,7 +24,7 @@ const SignUp = () => {
               type="text"
               name="email"
               id="email"
-              placeholder="enter your email"
+              placeholder="Enter your email"
               className="bg-white/30 w-full rounded-md border border-gray-700 outline-none px-4 py-3 text-gray-100 placeholder-white "
             />
           </div>
@@ -36,7 +36,7 @@ const SignUp = () => {
               type="password"
               name="password"
               id="password"
-              placeholder="enter your password"
+              placeholder="Enter your password"
               className="bg-white/30 w-full rounded-md border border-gray-700 outline-none px-4 py-3 text-gray-100 placeholder-white "
             />
           </div>
@@ -50,7 +50,7 @@ const SignUp = () => {
         <div className="flex items-center pt-4">
           <div className="flex-1 h-px bg-gray-700" />
           <p className="px-3 text-sm text-gray-400">
-            Sign Up with social accounts
+            Sign up with social accounts
           </p>
           <div className="flex-1 h-px bg-gray-700" />
         </div>
@@ -95,7 +95,7 @@ const SignUp = () => {
         </div>
 
         <p className="text-center text-xs text-gray-400 mt-2">
-          have an account?
+          Have an account?
           <a
             href="/login"
             className="text-[#F01111] font-semibold ml-1 hover:underline hover:text-purple-300"
