@@ -52,7 +52,7 @@ const AboutUs = () => {
       <div className="container mx-auto flex flex-row gap-20 justify-center text-center mt-10">
         <div className="flex flex-col gap-10">
           <div className="border-2 border-gray-300 rounded-md p-4">
-            <h1 className="text-2xl font-bold text-[#FF0000] pb-1 pl-10">AboutUs</h1>
+            <h1 className="text-2xl font-bold text-[#FF0000] pb-1 pl-10">About Us</h1>
             <p className="text-[#dbd9d9] leading-relaxed font-medium text-xl">
               We are a passionate team of five dedicated to helping individuals improve their fitness in
               simple, accessible ways. Our website offers free exercises and practical fitness tips to
@@ -61,9 +61,9 @@ const AboutUs = () => {
             </p>
           </div>
 
-          <div className="flex flex-row gap-3">
+          <div className="flex flex-row gap-10">
             <div className="border-2 border-gray-300 rounded-lg p-4">
-              <h2 className="text-2xl font-bold text-[#FF0000] pb-1">Our mission</h2>
+              <h2 className="text-2xl font-bold text-[#FF0000] pb-1">Our Mission</h2>
               <p className="text-[#dbd9d9] leading-relaxed font-medium text-xl">
                 Our mission is to make fitness accessible for everyone. We aim to provide easy-to-follow
                 exercises, including squats and other fundamental movements, to help individuals reach
@@ -71,7 +71,7 @@ const AboutUs = () => {
               </p>
             </div>
             <div className="border-2 border-gray-300 rounded-md p-4">
-              <h2 className="text-2xl font-bold text-[#FF0000] pb-1">Our Vission:</h2>
+              <h2 className="text-2xl font-bold text-[#FF0000] pb-1">Our Vission</h2>
               <div className="text-[#dbd9d9] leading-relaxed font-medium text-xl">
                 Our vision is to create a global fitness community where people of all ages can improve
                 their health and well-being through simple, effective exercises. We strive to inspire a
@@ -83,12 +83,12 @@ const AboutUs = () => {
       </div>
 
       {/* meet our team */}
-      <section className="flex flex-col gap-3 mt-10">
+      <section className="container mx-auto flex flex-col gap-3 mt-10">
         <div className="text-center font-bold text-2xl text-[#FF0000]">
           <h1>Meet Our Team</h1>
         </div>
 
-        <div className="grid grid-cols-5 gap-4 place-items-center h-[40vh]">
+        <div className="grid grid-cols-5 gap-36 place-items-center h-[40vh]">
           {[
             { name: 'Mohamed', img: 'src/assets/aboutus/WhatsApp Image 2023-12-21 at 17.03.15_b3a58753.jpg' },
             { name: 'Fares', img: 'src/assets/aboutus/fares aboutus.jpg' },

@@ -39,7 +39,7 @@ const LogIn = () => {
           </div>
           <div className="mx-auto flex justify-center mt-5">
             <button className="bg-red-600 text-white w-[150px] h-[40px] rounded-full font-semibold flex items-center justify-center ">
-              Sign in
+              Login
             </button>
           </div>
         </form>
