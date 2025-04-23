@@ -84,11 +84,11 @@ const AboutUs = () => {
 
       {/* meet our team */}
       <section className="container mx-auto flex flex-col gap-3 mt-10">
-        <div className="text-center font-bold text-2xl text-[#FF0000]">
+        <div className="text-center font-bold text-2xl text-[#FF0000] translate-x-[25px]">
           <h1>Meet Our Team</h1>
         </div>
 
-        <div className="grid grid-cols-5 gap-36 place-items-center h-[40vh]">
+        <div className="grid grid-cols-5 gap-36 place-items-center h-[40vh] translate-x-[25px]">
           {[
             { name: 'Mohamed', img: 'src/assets/aboutus/WhatsApp Image 2023-12-21 at 17.03.15_b3a58753.jpg' },
             { name: 'Fares', img: 'src/assets/aboutus/fares aboutus.jpg' },
