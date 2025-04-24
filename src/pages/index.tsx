@@ -1,4 +1,3 @@
-import { BlurIn } from "@/components/eldoraui/blurin";
 const Home = () => {
   return (
     <div className="">
@@ -6,15 +5,6 @@ const Home = () => {
       <div className="pt-24 px-24 lg:pt-28 bg-[linear-gradient(to_right,_rgba(0,0,0,1)_4%,_rgba(0,0,0,0.07)_100%)] w-full h-screen flex justify-center items-center">
         {/* first div description */}
         <div className="flex-1 flex flex-col space-y-10">
-          <BlurIn className="font-display text-center text-4xl font-bold -tracking-widest text-black dark:text-white md:text-7xl md:leading-[5rem]">
-            <p className="font-extrabold text-5xl text-white">
-              LOS ANGELES’ PREMIER{" "}
-              <span className="text-[#FF0000]">
-                MOBILE FITNESS AND HEALTH PROFESSIONALS
-              </span>
-            </p>
-          </BlurIn>
-
           <p className="font-extrabold text-5xl text-white">
             LOS ANGELES’ PREMIER{" "}
             <span className="text-[#FF0000] ">
