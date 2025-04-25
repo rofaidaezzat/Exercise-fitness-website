@@ -29,6 +29,9 @@ const Navbar = () => {
                 <NavLink to="/">Home</NavLink>
               </li>
               <li className="hover:text-gray-400 duration-500">
+                <NavLink to="/dashboard">Dashboard</NavLink>
+              </li>
+              <li className="hover:text-gray-400 duration-500">
                 <NavLink to="/exercises">Exercises</NavLink>
               </li>
               <li className="hover:text-gray-400 duration-500">
@@ -74,6 +77,11 @@ const Navbar = () => {
             <li>
               <NavLink to="/" onClick={() => setIsOpen(false)}>
                 Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/dashboard" onClick={() => setIsOpen(false)}>
+                Dashboard
               </NavLink>
             </li>
             <li>

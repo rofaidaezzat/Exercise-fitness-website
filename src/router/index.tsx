@@ -10,6 +10,7 @@ import AboutUs from "../pages/Aboutus/AboutUs";
 import LogIn from "../pages/LogIn";
 import SignUp from "../pages/SignUp";
 import Exercise from "../pages/Exercise";
+import Dashboard from "../pages/Dashboard/Dashboard"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +22,7 @@ const router = createBrowserRouter(
         <Route path="exercises" element={<Exercise />} />
         <Route path="login" element={<LogIn />} />
         <Route path="signup" element={<SignUp />} />
+        <Route path="dashboard" element={<Dashboard />} />
       </Route>
     </>
   )
