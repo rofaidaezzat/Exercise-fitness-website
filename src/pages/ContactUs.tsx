@@ -4,7 +4,8 @@ const ContactUs = () => {
       <h3 className="font-bold text-3xl text-white flex justify-center items-center mb-5">
         Talk to us about anything you want to tell us.
       </h3>
-      <div className=" ml-auto h-[600px] flex w-[95%] lg:grid-cols-6 gap-10 bg-gradient-to-r rounded-l-xl from-[#2C2C2C] to-[#FF0000]">
+      <div className="container mx-auto h-[600px] flex lg:grid-cols-6 gap-10 bg-gradient-to-r from-[#2C2C2C] to-[#FF0000] rounded-3xl overflow-hidden">
+
         {/*Contact Info Section*/}
         <div className="lg:col-start-1 lg:col-end-3 h-full pb-24 w-[40%] bg-[#EBE1E1] flex flex-col items-center justify-center border-r-black rounded-3xl p-5">
           <img src="src/assets/contact/contact.png" alt="contact" />
