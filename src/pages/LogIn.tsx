@@ -25,12 +25,12 @@ const LogIn = () => {
               name="password"
               id="password"
               className="w-full rounded-md border border-black outline-none px-4 py-3 text-gray-100 bg-transparent focus:bg-transparent focus:border-black"
-              placeholder="enter password"
+              placeholder="Password"
             />
             <div className="flex justify-end text-xs text-gray-400 mt-2 mb-3">
               <a
                 rel="noopener noreferrer"
-                href="#"
+                href="/ForgetPass"
                 className="text-gray-100 hover:underline hover:underline-offset-2 hover:decoration-purple-300 text-[14px]"
               >
                 Forgot Password?
@@ -38,8 +38,8 @@ const LogIn = () => {
             </div>
           </div>
           <div className="mx-auto flex justify-center mt-5">
-            <button className="bg-red-600 text-white w-[150px] h-[40px] rounded-full font-semibold flex items-center justify-center">
-              Sign up
+            <button className="bg-red-600 text-white w-[150px] h-[40px] rounded-full font-semibold flex items-center justify-center ">
+              Login
             </button>
           </div>
         </form>
