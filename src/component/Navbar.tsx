@@ -1,15 +1,27 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-
+import Button from "../UI/Button";
+import { Bell } from "lucide-react";
+import { CircleUserRound } from "lucide-react";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { pathname } = useLocation();
+  const storageKey = "loggedInUser";
+  const userDataString = localStorage.getItem(storageKey);
+  const userData = userDataString ? JSON.parse(userDataString) : null;
+  const onlogout = () => {
+    localStorage.removeItem(storageKey);
+    setTimeout(() => {
+      location.replace(pathname);
+    }, 1500);
+  };
 
   return (
     <>
       <nav
         className="w-full p-3 shadow-md rounded-b-3xl bg-gradient-to-r from-[#000000] to-[#FF0000]
-  fixed top-0 left-0 right-0 z-50"
+             fixed top-0 left-0 right-0 z-50"
       >
         <div className="max-w-7xl mx-auto flex justify-between items-center text-white font-semibold">
           {/* Logo & Navigation Links */}
@@ -44,20 +56,43 @@ const Navbar = () => {
           </div>
 
           {/* Buttons (Desktop) */}
-          <div className="hidden md:flex space-x-4">
-            <Link
-              to="login"
-              className="px-5 py-1 border-2 bg-white text-black border-white rounded-lg text-center w-21 hover:bg-gray-200 duration-500 hover:border-gray-200 transition-colors"
-            >
-              Login
-            </Link>
-            <Link
-              to="signup"
-              className="px-5 py-1 border-2 bg-[#121212] border-black rounded-lg text-center w-21 hover:bg-gray-800 duration-500 hover:border-gray-800 transition-colors"
-            >
-              Sign Up
-            </Link>
-          </div>
+          {userData ? (
+            <div className="hidden md:flex space-x-4 items-center">
+              <Bell
+                size={30}
+                color="white"
+                className="cursor-pointer rounded-sm"
+              />
+
+              <div className="relative">
+                <CircleUserRound
+                  color="white"
+                  size={30}
+                  className="cursor-pointer rounded-sm"
+                />
+              </div>
+
+              <Button className="cursor-pointer" onClick={onlogout}>
+                {" "}
+                Logout
+              </Button>
+            </div>
+          ) : (
+            <div className="hidden md:flex space-x-4">
+              <Link
+                to="login"
+                className="px-5 py-1 border-2 bg-white text-black border-white rounded-lg text-center w-21 hover:bg-gray-200 duration-500 hover:border-gray-200 transition-colors"
+              >
+                Login
+              </Link>
+              <Link
+                to="signup"
+                className="px-5 py-1 border-2 bg-[#121212] border-black rounded-lg text-center w-21 hover:bg-gray-800 duration-500 hover:border-gray-800 transition-colors"
+              >
+                Sign Up
+              </Link>
+            </div>
+          )}
 
           {/* Mobile Menu Button */}
           <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
