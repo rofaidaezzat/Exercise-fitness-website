@@ -1,0 +1,35 @@
+.card-profissional {
+    @apply relative w-[250px] h-[300px] flex justify-center items-center overflow-hidden;
+    
+  }
+  
+  .card-profissional::before {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-full;
+     /* red-400 to red-700 */
+  }
+  
+  .card-profissional::after {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-full;
+   
+    filter: blur(30px);
+  }
+  
+  /* .card-profissional b {
+    @apply absolute z-[2];
+    inset: 6px;
+   
+  } */
+  
+  .card-profissional .content-profissional {
+    @apply absolute bottom-0 z-[3] flex flex-col items-center justify-center bg-black h-[70px] w-full text-white text-3xl font-semibold transition-all duration-500 opacity-0 scale-0;
+  }
+  
+  .card-profissional:hover .content-profissional {
+    
+    bottom: 25px;
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  

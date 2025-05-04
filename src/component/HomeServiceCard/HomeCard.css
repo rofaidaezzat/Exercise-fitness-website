@@ -1,0 +1,27 @@
+.card-Home {
+    @apply w-[300px] h-[400px] relative rounded-[15px] overflow-hidden;
+    /* box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); */
+  }
+  
+  .remove-when-use-Home {
+    @apply text-center w-full absolute text-black font-bold;
+    /* top: 85px; */
+  }
+  
+  .details-Home {
+    @apply text-white w-full absolute bottom-0 transition-all ease-in-out overflow-hidden p-[0.6em];
+    height: 2.6em;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  }
+  
+  .details-Home > p {
+    @apply text-[0.8em] mt-[0.5em];
+  }
+  
+  
+  
+  .card-Home:hover > .details-Home {
+    height: 9em;
+  }
+  
