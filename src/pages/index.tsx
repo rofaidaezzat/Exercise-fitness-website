@@ -1,3 +1,7 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import HomeProfitional from "../component/HomePrifissionalCard/HomeProfitional";
 import HomeCard from "../component/HomeServiceCard/HomeCard";
 import { profissionalData, serviceData } from "../data";
@@ -5,9 +9,16 @@ import Button from "../UI/Button";
 import Image from "../UI/Image";
 
 const Home = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
     <div className="">
-      <div className="pt-16 px-6 md:px-12 lg:px-24 lg:pt-28 bg-[linear-gradient(to_right,_rgba(0,0,0,1)_4%,_rgba(0,0,0,0.07)_100%)] w-full min-h-screen flex flex-col lg:flex-row justify-center items-center space-y-10 lg:space-y-0 lg:space-x-10">
+      <div 
+      data-aos="fade-up" data-aos-delay="250"
+      className="pt-16 px-6 md:px-12 lg:px-24 lg:pt-28 bg-[linear-gradient(to_right,_rgba(0,0,0,1)_4%,_rgba(0,0,0,0.07)_100%)] w-full min-h-screen flex flex-col lg:flex-row justify-center items-center space-y-10 lg:space-y-0 lg:space-x-10"
+      >
         {/* first div description */}
         <div className="flex-1 flex flex-col space-y-6 text-center lg:text-left">
           <p className="font-extrabold text-3xl sm:text-4xl md:text-5xl text-white">
@@ -17,7 +28,7 @@ const Home = () => {
             </span>
           </p>
           <p className="text-white text-sm sm:text-base md:text-lg">
-            Level up your fitness and health journey with XLEVEL's onsite
+            Level up your fitness and health journey with FlowForma's onsite
             personalized training, fitness technology, and dietitian services.
           </p>
           <a
@@ -55,7 +66,7 @@ const Home = () => {
           <div className="w-[250px] sm:w-[350px] md:w-[450px] lg:w-[500px] h-auto">
             <img
               className="w-full h-full object-contain"
-              src="src/assets/home/photo_2025-04-21_11-30-50-removebg-preview.png"
+              src="src/assets/home/bg-home.png"
               alt="Fitness Professional"
             />
           </div>
@@ -63,7 +74,10 @@ const Home = () => {
       </div>
 
       {/* second section */}
-      <div className="bg-[#121212] text-white py-14 px-6 md:px-12 lg:px-24">
+      <div 
+      data-aos="fade-right" data-aos-delay="250"
+      className="bg-[#121212] text-white py-14 px-6 md:px-12 lg:px-24"
+      >
         <h1 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold">
           Why <span className="text-[#FF0000]">Choose Us</span>
         </h1>
@@ -126,7 +140,10 @@ const Home = () => {
       </div>
 
       {/* third section */}
-      <div className="bg-[#121212] text-white py-14 px-6">
+      <div 
+      data-aos="fade-up" data-aos-delay="250"
+      className="bg-[#121212] text-white py-14 px-6"
+      >
         <h1 className="text-center text-5xl font-bold uppercase mb-12">
           Mobile App
           <br />
@@ -174,7 +191,10 @@ const Home = () => {
       </div>
 
       {/* fourth section */}
-      <div className="bg-[#121212] text-white py-28 px-4 sm:px-6 md:px-10 lg:px-24 justify-center sm:justify-center justify-items-center sm:justify-items-center">
+      <div 
+      data-aos="fade-right" data-aos-delay="250"
+      className="bg-[#121212] text-white py-28 px-4 sm:px-6 md:px-10 lg:px-24 justify-center sm:justify-center justify-items-center sm:justify-items-center"
+      >
         <h1 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold">
           Our <span className="text-[#FF0000]">Services</span>
         </h1>
@@ -197,7 +217,10 @@ const Home = () => {
       </div>
 
       {/* fifth section */}
-      <div className="bg-[#121212] text-white py-28 px-6 justify-center sm:justify-center justify-items-center sm:justify-items-center">
+      <div 
+      data-aos="fade-up" data-aos-delay="250"
+      className="bg-[#121212] text-white py-28 px-6 justify-center sm:justify-center justify-items-center sm:justify-items-center"
+      >
         <h1 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold">
           Our professional <span className="text-[#FF0000]">trainers</span>
         </h1>
