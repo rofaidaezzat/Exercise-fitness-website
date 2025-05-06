@@ -28,7 +28,7 @@ const Home = () => {
             </span>
           </p>
           <p className="text-white text-sm sm:text-base md:text-lg">
-            Level up your fitness and health journey with XLEVEL's onsite
+            Level up your fitness and health journey with FlowForma's onsite
             personalized training, fitness technology, and dietitian services.
           </p>
           <a
@@ -66,7 +66,7 @@ const Home = () => {
           <div className="w-[250px] sm:w-[350px] md:w-[450px] lg:w-[500px] h-auto">
             <img
               className="w-full h-full object-contain"
-              src="src/assets/home/photo_2025-04-21_11-30-50-removebg-preview.png"
+              src="src/assets/home/bg-home.png"
               alt="Fitness Professional"
             />
           </div>
