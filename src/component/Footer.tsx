@@ -87,7 +87,7 @@ const Footer = () => {
           </div>
 
           {/* Newsletter Section */}
-          <div className="text-center lg:text-left">
+          <div className="text-center lg:text-left flex flex-col items-center lg:items-start">
             <h3 className="font-semibold mb-2 text-[#ff0000] text-lg lg:text-3xl">
               Join a Newsletter
             </h3>

@@ -1,13 +1,13 @@
 const ContactUs = () => {
   return (
     <div className="bg-[#121212] w-full min-h-screen pt-24 lg:pt-24">
-      <h3 className="font-bold text-3xl text-white flex justify-center items-center mb-5">
+      <h3 className="font-bold text-3xl text-white flex justify-center items-center mb-10 text-center">
         Talk to us about anything you want to tell us.
       </h3>
-      <div className="container mx-auto h-[600px] flex lg:grid-cols-6 gap-10 bg-gradient-to-r from-[#2C2C2C] to-[#FF0000] rounded-3xl overflow-hidden">
+      <div className="container mx-auto min-h-[600px] flex flex-col lg:flex-row gap-10 bg-gradient-to-r from-[#2C2C2C] to-[#FF0000] rounded-3xl overflow-hidden">
 
         {/*Contact Info Section*/}
-        <div className="lg:col-start-1 lg:col-end-3 h-full pb-24 w-[40%] bg-[#EBE1E1] flex flex-col items-center justify-center border-r-black rounded-3xl p-5">
+        <div className="lg:col-start-1 lg:col-end-3 h-full pb-24 lg:w-[40%] bg-[#EBE1E1] flex flex-col items-center justify-center border-r-black rounded-3xl p-5 md:w-full sm:w-full md:justify-center">
           <img src="src/assets/contact/contact.png" alt="contact" />
           <h2 className="text-2xl font-bold">CONTACT US</h2>
           <p className="text-center text-black mt-3">
@@ -46,7 +46,7 @@ const ContactUs = () => {
         </div>
 
         {/*Contact Form Section*/}
-        <div className="lg:col-span-4 lg:col-end-7 w-full  rounded-3xl">
+        <div className="lg:col-span-4 lg:col-end-7 w-full rounded-3xl pb-10">
           <form>
             <div className="flex gap-20 mb-4 px-10 mt-8">
               {/* First Name */}
@@ -102,7 +102,7 @@ const ContactUs = () => {
               ></textarea>
             </div>
 
-            <div className="flex justify-end px-10 mt-5">
+            <div className="flex justify-end px-10 mt-5 sm:mb-5 md:mb-5 ">
               <button
                 type="submit"
                 className="bg-[#121212] text-white font-semibold py-2 rounded-2xl hover:bg-gray-800 transition duration-500 px-16"
