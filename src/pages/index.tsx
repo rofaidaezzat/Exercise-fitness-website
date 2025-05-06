@@ -1,7 +1,3 @@
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
 import HomeProfitional from "../component/HomePrifissionalCard/HomeProfitional";
 import HomeCard from "../component/HomeServiceCard/HomeCard";
 import { profissionalData, serviceData } from "../data";
@@ -9,20 +5,21 @@ import Button from "../UI/Button";
 import Image from "../UI/Image";
 
 const Home = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
-  }, []);
-
   return (
     <div className="">
+<<<<<<< HEAD
       <div
         data-aos="fade-up" data-aos-delay="250"
         className="pt-16 px-6 md:px-12 lg:px-24 lg:pt-28 bg-[linear-gradient(to_right,_rgba(0,0,0,1)_4%,_rgba(0,0,0,0.07)_100%)] w-full min-h-screen flex flex-col lg:flex-row justify-center items-center space-y-10 lg:space-y-0 lg:space-x-10 mx-auto max-w-full overflow-x-hidden"
+=======
+      <div 
+      className="pt-16 px-6 md:px-12 lg:px-24 lg:pt-28 bg-[linear-gradient(to_right,_rgba(0,0,0,1)_4%,_rgba(0,0,0,0.07)_100%)] w-full min-h-screen flex flex-col lg:flex-row justify-center items-center space-y-10 lg:space-y-0 lg:space-x-10"
+>>>>>>> 0fbf68cea2b86a6aef1cb28658d7295a2b89a7f8
       >
         {/* First div description */}
         <div className="flex-1 flex flex-col space-y-6 text-center lg:text-left lg:ml-12 sm:mt-10">
           <p className="font-extrabold text-3xl sm:text-4xl md:text-5xl text-white">
-            LOS ANGELES’ PREMIER{" "}
+            LOS ANGELES' PREMIER{" "}
             <span className="text-[#FF0000]">
               MOBILE FITNESS AND HEALTH PROFESSIONALS
             </span>
@@ -71,11 +68,17 @@ const Home = () => {
         </div>
       </div>
 
+<<<<<<< HEAD
 
       {/* Second section */}
       <div
         data-aos="fade-right" data-aos-delay="250"
         className="bg-[#121212] text-white py-14 px-6 md:px-12 lg:px-24"
+=======
+      {/* second section */}
+      <div 
+      className="bg-[#121212] text-white py-28 px-4 sm:px-6 md:px-10 lg:px-24 justify-center sm:justify-center justify-items-center sm:justify-items-center"
+>>>>>>> 0fbf68cea2b86a6aef1cb28658d7295a2b89a7f8
       >
         <h1 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold">
           Why <span className="text-[#FF0000]">Choose Us</span>
@@ -138,10 +141,16 @@ const Home = () => {
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Third section */}
       <div
         data-aos="fade-up" data-aos-delay="250"
         className="bg-[#121212] text-white py-14 px-6"
+=======
+      {/* third section */}
+      <div 
+      className="bg-[#121212] text-white py-14 px-6"
+>>>>>>> 0fbf68cea2b86a6aef1cb28658d7295a2b89a7f8
       >
         <h1 className="text-center text-5xl font-bold uppercase mb-12">
           Mobile App
@@ -189,10 +198,16 @@ const Home = () => {
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Fourth section */}
       <div
         data-aos="fade-right" data-aos-delay="250"
         className="bg-[#121212] text-white py-28 px-4 sm:px-6 md:px-10 lg:px-24 justify-center sm:justify-center justify-items-center sm:justify-items-center"
+=======
+      {/* fourth section */}
+      <div 
+      className="bg-[#121212] text-white py-28 px-4 sm:px-6 md:px-10 lg:px-24 justify-center sm:justify-center justify-items-center sm:justify-items-center"
+>>>>>>> 0fbf68cea2b86a6aef1cb28658d7295a2b89a7f8
       >
         <h1 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold">
           Our <span className="text-[#FF0000]">Services</span>
@@ -215,10 +230,16 @@ const Home = () => {
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Fifth section */}
       <div
         data-aos="fade-up" data-aos-delay="250"
         className="bg-[#121212] text-white py-28 px-6 justify-center sm:justify-center justify-items-center sm:justify-items-center"
+=======
+      {/* fifth section */}
+      <div 
+      className="bg-[#121212] text-white py-28 px-6 justify-center sm:justify-center justify-items-center sm:justify-items-center"
+>>>>>>> 0fbf68cea2b86a6aef1cb28658d7295a2b89a7f8
       >
         <h1 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold">
           Our professional <span className="text-[#FF0000]">trainers</span>
