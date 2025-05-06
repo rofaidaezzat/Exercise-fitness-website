@@ -15,12 +15,12 @@ const Home = () => {
 
   return (
     <div className="">
-      <div 
-      data-aos="fade-up" data-aos-delay="250"
-      className="pt-16 px-6 md:px-12 lg:px-24 lg:pt-28 bg-[linear-gradient(to_right,_rgba(0,0,0,1)_4%,_rgba(0,0,0,0.07)_100%)] w-full min-h-screen flex flex-col lg:flex-row justify-center items-center space-y-10 lg:space-y-0 lg:space-x-10"
+      <div
+        data-aos="fade-up" data-aos-delay="250"
+        className="pt-16 px-6 md:px-12 lg:px-24 lg:pt-28 bg-[linear-gradient(to_right,_rgba(0,0,0,1)_4%,_rgba(0,0,0,0.07)_100%)] w-full min-h-screen flex flex-col lg:flex-row justify-center items-center space-y-10 lg:space-y-0 lg:space-x-10 mx-auto max-w-full overflow-x-hidden"
       >
-        {/* first div description */}
-        <div className="flex-1 flex flex-col space-y-6 text-center lg:text-left">
+        {/* First div description */}
+        <div className="flex-1 flex flex-col space-y-6 text-center lg:text-left lg:ml-12 sm:mt-10">
           <p className="font-extrabold text-3xl sm:text-4xl md:text-5xl text-white">
             LOS ANGELES’ PREMIER{" "}
             <span className="text-[#FF0000]">
@@ -42,9 +42,7 @@ const Home = () => {
               <span className="text-[#FF0000] text-xl sm:text-2xl font-semibold">
                 05+
               </span>
-              <p className="text-white text-xs sm:text-sm">
-                Years of Experience
-              </p>
+              <p className="text-white text-xs sm:text-sm">Years of Experience</p>
             </div>
             <div className="flex flex-col items-center justify-center px-4 border-r-2 border-white">
               <span className="text-[#FF0000] text-xl sm:text-2xl font-semibold">
@@ -61,22 +59,23 @@ const Home = () => {
           </div>
         </div>
 
-        {/* second div image */}
+        {/* Second div image */}
         <div className="flex-1 flex justify-center">
           <div className="w-[250px] sm:w-[350px] md:w-[450px] lg:w-[500px] h-auto">
             <img
               className="w-full h-full object-contain"
-              src="src/assets/home/bg-home.png"
+              src="src/assets/home/home-bg.png"
               alt="Fitness Professional"
             />
           </div>
         </div>
       </div>
 
-      {/* second section */}
-      <div 
-      data-aos="fade-right" data-aos-delay="250"
-      className="bg-[#121212] text-white py-14 px-6 md:px-12 lg:px-24"
+
+      {/* Second section */}
+      <div
+        data-aos="fade-right" data-aos-delay="250"
+        className="bg-[#121212] text-white py-14 px-6 md:px-12 lg:px-24"
       >
         <h1 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold">
           Why <span className="text-[#FF0000]">Choose Us</span>
@@ -139,10 +138,10 @@ const Home = () => {
         </div>
       </div>
 
-      {/* third section */}
-      <div 
-      data-aos="fade-up" data-aos-delay="250"
-      className="bg-[#121212] text-white py-14 px-6"
+      {/* Third section */}
+      <div
+        data-aos="fade-up" data-aos-delay="250"
+        className="bg-[#121212] text-white py-14 px-6"
       >
         <h1 className="text-center text-5xl font-bold uppercase mb-12">
           Mobile App
@@ -151,7 +150,7 @@ const Home = () => {
         </h1>
 
         <div className="flex flex-col lg:flex-row items-center justify-center gap-48">
-          {/* صور الهاتف */}
+          {/*Mobile pictures*/}
           <div className="flex flex-row relative w-fit">
             <Image
               Imageurl="/src/assets/home/photo_2025-05-03_15-56-18-removebg-preview.png"
@@ -165,7 +164,7 @@ const Home = () => {
             />
           </div>
 
-          {/* مميزات التطبيق */}
+          {/*App features*/}
           <div className="max-w-md space-y-6">
             <ul className="space-y-3 text-lg">
               {[
@@ -190,10 +189,10 @@ const Home = () => {
         </div>
       </div>
 
-      {/* fourth section */}
-      <div 
-      data-aos="fade-right" data-aos-delay="250"
-      className="bg-[#121212] text-white py-28 px-4 sm:px-6 md:px-10 lg:px-24 justify-center sm:justify-center justify-items-center sm:justify-items-center"
+      {/* Fourth section */}
+      <div
+        data-aos="fade-right" data-aos-delay="250"
+        className="bg-[#121212] text-white py-28 px-4 sm:px-6 md:px-10 lg:px-24 justify-center sm:justify-center justify-items-center sm:justify-items-center"
       >
         <h1 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold">
           Our <span className="text-[#FF0000]">Services</span>
@@ -216,10 +215,10 @@ const Home = () => {
         </div>
       </div>
 
-      {/* fifth section */}
-      <div 
-      data-aos="fade-up" data-aos-delay="250"
-      className="bg-[#121212] text-white py-28 px-6 justify-center sm:justify-center justify-items-center sm:justify-items-center"
+      {/* Fifth section */}
+      <div
+        data-aos="fade-up" data-aos-delay="250"
+        className="bg-[#121212] text-white py-28 px-6 justify-center sm:justify-center justify-items-center sm:justify-items-center"
       >
         <h1 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold">
           Our professional <span className="text-[#FF0000]">trainers</span>
