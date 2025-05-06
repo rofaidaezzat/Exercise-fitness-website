@@ -29,7 +29,7 @@ const Footer = () => {
           {/* About Section */}
           <div className="text-center lg:text-left">
             <p className="text-xl font-medium leading-relaxed text-[#ff0000]">
-              XLEVEL was founded by fitness, health and technology experts
+              FlowForma was founded by fitness, health and technology experts
               committed to making fitness and health more fit for your place and
               pace.
             </p>
@@ -41,22 +41,22 @@ const Footer = () => {
               Main
             </h3>
             <ul className="space-y-2">
-              <li>
+              <li className="hover:text-gray-400 duration-500">
                 <Link to="/">Home</Link>
               </li>
-              <li>
+              <li className="hover:text-gray-400 duration-500">
                 <Link to="/">Exercise</Link>
               </li>
-              <li>
+              <li className="hover:text-gray-400 duration-500">
                 <Link to="/login">Log In</Link>
               </li>
-              <li>
+              <li className="hover:text-gray-400 duration-500">
                 <Link to="/signup">Sign Up</Link>
               </li>
-              <li>
+              <li className="hover:text-gray-400 duration-500">
                 <Link to="/aboutus">About Us</Link>
               </li>
-              <li>
+              <li className="hover:text-gray-400 duration-500">
                 <Link to="/contactus">Contact Us</Link>
               </li>
             </ul>
@@ -68,19 +68,19 @@ const Footer = () => {
               Legal
             </h3>
             <ul className="space-y-2">
-              <li>
+              <li className="hover:text-gray-400 duration-500">
                 <Link to="/">Privacy Policy</Link>
               </li>
-              <li>
+              <li className="hover:text-gray-400 duration-500">
                 <Link to="/">Blog</Link>
               </li>
-              <li>
+              <li className="hover:text-gray-400 duration-500">
                 <Link to="/">Cookies Policy</Link>
               </li>
-              <li>
+              <li className="hover:text-gray-400 duration-500">
                 <Link to="/">FAQ</Link>
               </li>
-              <li>
+              <li className="hover:text-gray-400 duration-500">
                 <Link to="/">Terms & Conditions</Link>
               </li>
             </ul>

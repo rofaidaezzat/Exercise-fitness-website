@@ -22,9 +22,9 @@ const Home = () => {
           </p>
           <a
             href="/exercises"
-            className="px-5 py-3 font-semibold w-fit mx-auto lg:mx-0 rounded-lg border-2 border-[#FF0000] text-white"
+            className="px-5 py-3 font-semibold w-fit mx-auto lg:mx-0 rounded-lg border-2 border-[#FF0000] text-white hover:bg-[#FF0000] duration-500"
           >
-            Get Start
+            GET STARTED
           </a>
           <div className="flex justify-center lg:justify-start items-center space-x-4 flex-wrap gap-y-4">
             <div className="flex flex-col items-center justify-center px-4 border-r-2 border-white">
@@ -166,7 +166,7 @@ const Home = () => {
               ))}
             </ul>
 
-            <Button className="mt-6 px-6 py-3 text-[#FF0000] border-2 border-[#FF0000] rounded hover:bg-[#FF0000] hover:text-white transition-all duration-300 font-semibold uppercase tracking-wider">
+            <Button className="mt-6 px-6 py-3 text-[#FF0000] border-2 border-[#FF0000] rounded hover:bg-[#FF0000] hover:text-white transition-all duration-500 font-semibold uppercase tracking-wider">
               Try Now
             </Button>
           </div>
@@ -174,7 +174,7 @@ const Home = () => {
       </div>
 
       {/* fourth section */}
-      <div className="bg-[#121212] text-white py-28 px-4 sm:px-6 md:px-10 lg:px-24">
+      <div className="bg-[#121212] text-white py-28 px-4 sm:px-6 md:px-10 lg:px-24 justify-center sm:justify-center justify-items-center sm:justify-items-center">
         <h1 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold">
           Our <span className="text-[#FF0000]">Services</span>
         </h1>
@@ -182,7 +182,7 @@ const Home = () => {
           Delivered By Highly Trained Fitness and Health Professionals
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10 justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-10">
           {serviceData.map((data, indx) => (
             <div key={indx} className="w-full h-full">
               <HomeCard
@@ -197,7 +197,7 @@ const Home = () => {
       </div>
 
       {/* fifth section */}
-      <div className="bg-[#121212] text-white py-28 px-6">
+      <div className="bg-[#121212] text-white py-28 px-6 justify-center sm:justify-center justify-items-center sm:justify-items-center">
         <h1 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold">
           Our professional <span className="text-[#FF0000]">trainers</span>
         </h1>
@@ -205,7 +205,7 @@ const Home = () => {
           Delivered By Highly Trained Fitness and Health Professionals
         </p>
 
-        <div className="flex flex-wrap justify-center gap-6 mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mt-10">
           {profissionalData.map((data, indx) => (
             <div key={indx} className="w-full sm:w-2/3 md:w-1/2 lg:w-auto">
               <HomeProfitional Name={data.Name} imageurl={data.imageurl} />
