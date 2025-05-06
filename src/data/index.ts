@@ -34,22 +34,22 @@ export const profissionalData:IprofissionalData[]=[
     },
     {
         id:2,
-        Name:"elsa windia",
+        Name:"Elsa Windia",
         imageurl:"/src/assets/home/photo_2025-05-03_22-16-01.jpg"
     },
     {
         id:3,
-        Name:"elsa windia",
+        Name:"Rachel Blake",
         imageurl:"/src/assets/home/6d08c1b4da5b906b9e802865cce8647e.jpg"
     },
     {
         id:4,
-        Name:"elsa windia",
+        Name:"Jenna Rhodes",
         imageurl:"/src/assets/home/77c442aefe6e0d07b2bc2a5abbfd6b34.jpg"
     },
     {
         id:5,
-        Name:"Geourge aryo",
+        Name:"Geourge Aryo",
         imageurl:"/src/assets/home/dffc5fee54384cc13a2c3ce755009e7f.jpg"
     }
 
