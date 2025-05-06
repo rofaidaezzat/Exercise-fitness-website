@@ -23,11 +23,10 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="">
+    <div className="bg-[#121212] min-h-screen">
       <div 
       data-aos="fade-up" data-aos-delay="250"
-      className="pt-16 px-6 md:px-12 lg:px-24 lg:pt-28 bg-[linear-gradient(to_right,_rgba(0,0,0,1)_4%,_rgba(0,0,0,0.07)_100%)] w-full min-h-screen flex flex-col lg:flex-row justify-center items-center space-y-10 lg:space-y-0 lg:space-x-10"
-      >
+      className="pt-16 px-6 md:px-12 lg:px-24 lg:pt-28 bg-[linear-gradient(to_right,_rgba(0,0,0,1)_4%,_rgba(0,0,0,0.07)_100%)] w-full min-h-screen flex flex-col lg:flex-row justify-center items-center space-y-10 lg:space-y-0 lg:space-x-10">
         {/* first div description */}
         <div className="flex-1 flex flex-col space-y-6 text-center lg:text-left">
           <p className="font-extrabold text-3xl sm:text-4xl md:text-5xl text-white">
