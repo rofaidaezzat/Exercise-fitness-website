@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "./aos-custom.css";
 
 import HomeProfitional from "../component/HomePrifissionalCard/HomeProfitional";
 import HomeCard from "../component/HomeServiceCard/HomeCard";
@@ -10,7 +11,15 @@ import Image from "../UI/Image";
 
 const Home = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
+    AOS.init({ 
+      duration: 1000, 
+      once: true,
+      disable: 'mobile',
+      startEvent: 'DOMContentLoaded',
+      mirror: false,
+      disableMutationObserver: false,
+      useClassNames: true
+    });
   }, []);
 
   return (
@@ -22,7 +31,7 @@ const Home = () => {
         {/* first div description */}
         <div className="flex-1 flex flex-col space-y-6 text-center lg:text-left">
           <p className="font-extrabold text-3xl sm:text-4xl md:text-5xl text-white">
-            LOS ANGELES’ PREMIER{" "}
+            LOS ANGELES' PREMIER{" "}
             <span className="text-[#FF0000]">
               MOBILE FITNESS AND HEALTH PROFESSIONALS
             </span>
