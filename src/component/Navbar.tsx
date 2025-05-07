@@ -1,21 +1,17 @@
 import { useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import Button from "../UI/Button";
-import { Bell } from "lucide-react";
+
 import { CircleUserRound } from "lucide-react";
+import { FaDumbbell } from "react-icons/fa";
+import ProfileMenuModal from "./ProfileMenu";
 const Navbar = () => {
+  const [isOpenModal, setIsOpenModal] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const { pathname } = useLocation();
+
   const storageKey = "loggedInUser";
   const userDataString = localStorage.getItem(storageKey);
   const userData = userDataString ? JSON.parse(userDataString) : null;
-  const onlogout = () => {
-    localStorage.removeItem(storageKey);
-    setTimeout(() => {
-      location.replace(pathname);
-    }, 1500);
-  };
 
   return (
     <>
@@ -28,11 +24,14 @@ const Navbar = () => {
           <div className="flex items-center space-x-6">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2">
-              <img
+              <div className="text-4xl text-[#FF0000]">
+                <FaDumbbell />
+              </div>
+              {/* <img
                 src="\src\assets\authentication\photo_2025-04-19_11-59-50-removebg-preview.png"
                 alt="Logo"
                 className="h-10"
-              />
+              /> */}
             </Link>
 
             {/* Desktop Navigation */}
@@ -60,25 +59,22 @@ const Navbar = () => {
 
           {/* Buttons (Desktop) */}
           {userData ? (
-            <div className="hidden md:flex space-x-4 items-center">
-              <Bell
-                size={30}
-                color="white"
-                className="cursor-pointer rounded-sm"
-              />
-
-              <div className="relative">
+            <div className="relative">
+              <button onClick={() => setIsOpenModal(!isOpenModal)}>
                 <CircleUserRound
                   color="white"
                   size={30}
                   className="cursor-pointer rounded-sm"
                 />
-              </div>
-
-              <Button className="cursor-pointer" onClick={onlogout}>
-                {" "}
-                Logout
-              </Button>
+              </button>
+              {isOpenModal && (
+                <div className="absolute right-0 mt-2 z-50">
+                  <ProfileMenuModal
+                    isOpen={isOpenModal}
+                    onClose={() => setIsOpenModal(false)}
+                  />
+                </div>
+              )}
             </div>
           ) : (
             <div className="hidden md:flex space-x-4">
@@ -122,9 +118,12 @@ const Navbar = () => {
                 Dashboard
               </NavLink>
             </li>
+            <NavLink to="/calories" onClick={() => setIsOpen(false)}>
+                Calorie Intake
+              </NavLink>
             <li>
               <NavLink to="/tracks" onClick={() => setIsOpen(false)}>
-                exercises
+                Exercises
               </NavLink>
             </li>
             <li>
@@ -149,9 +148,9 @@ const Navbar = () => {
             </Link>
             <Link
               to="signup"
-              className="px-4 py-2 rounded-lg bg-yellow-400 text-black w-20 text-center"
+              className="px-4 py-2 rounded-lg bg-[#FF0000] text-white w-25 text-center"
             >
-              Signup
+              Sign Up
             </Link>
           </div>
         </div>
