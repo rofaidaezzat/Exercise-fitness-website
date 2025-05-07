@@ -14,6 +14,7 @@ import Dashboard from "../pages/Dashboard/Dashboard";
 import ResetPass from "../pages/Forget&ResetPass/ResetPass";
 import ForgetPass from "../pages/Forget&ResetPass/ForgetPass";
 import ProtectedRoute from "../auth/ProtectedRoute";
+import Calories from "../pages/Calories";
 const storageKey = "loggedInUser";
 const userDataString = localStorage.getItem(storageKey);
 const userData = userDataString ? JSON.parse(userDataString) : null;
@@ -24,7 +25,7 @@ const router = createBrowserRouter(
         <Route index element={<Home />} />
         <Route path="contactus" element={<ContactUs />} />
         <Route path="aboutus" element={<AboutUs />} />
-
+        <Route path="calories" element={<Calories/>} />
         <Route path="login" element={<LogIn />} />
         <Route path="signup" element={<SignUp />} />
         <Route path="dashboard" element={<Dashboard />} />
