@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import axiosInstance from "../config/axios.config";
 import toast from "react-hot-toast";
 import { useState } from "react";
 import { SignupValidation } from "../validation";
+import { axiosInstance } from "../config/axios.config";
 
 const SignUp = () => {
   const navigate = useNavigate();

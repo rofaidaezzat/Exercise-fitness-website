@@ -1,8 +1,7 @@
 import { useState } from "react";
-
-import axiosInstance from "../config/axios.config";
 import toast from "react-hot-toast";
 import { LogInValidation } from "../validation";
+import { axiosInstance } from "../config/axios.config";
 
 const LogIn = () => {
   const [isLoading, setIsLoading] = useState(false);
