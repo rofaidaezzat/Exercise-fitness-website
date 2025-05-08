@@ -1,20 +1,28 @@
 import { useEffect } from "react";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import HomeProfitional from "../component/HomePrifissionalCard/HomeProfitional";
 import HomeCard from "../component/HomeServiceCard/HomeCard";
 import { profissionalData, serviceData } from "../data";
 import Button from "../UI/Button";
 import Image from "../UI/Image";
+import Section from "../UI/Section";
 
 const Home = () => {
-  useEffect(() => {
-  }, []);
 
+  useEffect(() => {
+    AOS.init({ 
+      duration: 1000, 
+      once: true,
+      startEvent: 'DOMContentLoaded',
+      disable: 'mobile'
+    });
+  }, []);
+  
   return (
-    <div className="">
-      <div className="pt-16 px-6 md:px-12 lg:px-24 lg:pt-28 bg-[linear-gradient(to_right,_rgba(0,0,0,1)_4%,_rgba(0,0,0,0.07)_100%)] w-full min-h-screen flex flex-col lg:flex-row justify-center items-center space-y-10 lg:space-y-0 lg:space-x-10 mx-auto max-w-full overflow-x-hidden"
-      >
+    <div>
+      <div className="pt-16 px-6 md:px-12 lg:px-24 lg:pt-28 bg-[linear-gradient(to_right,_rgba(0,0,0,1)_4%,_rgba(0,0,0,0.07)_100%)] w-full min-h-screen flex flex-col lg:flex-row justify-center items-center space-y-10 lg:space-y-0 lg:space-x-10 mx-auto max-w-full overflow-x-hidden">
         {/* First div description */}
         <div className="flex-1 flex flex-col space-y-6 text-center lg:text-left lg:ml-12 sm:mt-10">
           <p className="font-extrabold text-3xl sm:text-4xl md:text-5xl text-white">
@@ -57,7 +65,7 @@ const Home = () => {
 
         {/* Second div image */}
         <div className="flex-1 flex justify-center">
-          <div className="w-[250px] sm:w-[350px] md:w-[450px] lg:w-[500px] h-auto">
+          <div className="w-[250px] sm:w-[350px] md:w-[450px] lg:w-[500px] h-auto ">
             <img
               className="w-full h-full object-contain"
               src="src/assets/home/home-bg.png"
@@ -67,165 +75,155 @@ const Home = () => {
         </div>
       </div>
 
+      <div className="bg-[#121212]">
+        <Section className="text-white py-14 px-6 md:px-12 lg:px-24">
+          <h1 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold">
+            Why <span className="text-[#FF0000]">Choose Us</span>
+          </h1>
+          <p className="text-center mt-4 sm:mt-6 text-sm sm:text-base">
+            Gym workouts offer a versatile and customisable experience, allowing
+            everyone to set specific fitness goals.
+          </p>
 
-      {/* Second section */}
-      <div className="bg-[#121212] text-white py-14 px-6 md:px-12 lg:px-24"
-      >
-        <h1 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold">
-          Why <span className="text-[#FF0000]">Choose Us</span>
-        </h1>
-        <p className="text-center mt-4 sm:mt-6 text-sm sm:text-base">
-          Gym workouts offer a versatile and customisable experience, allowing
-          everyone to set specific fitness goals.
-        </p>
-
-        <div className="mt-10 space-y-10 lg:space-y-0">
-          {/* First row */}
-          <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 justify-center items-stretch mb-10">
-            <div className="border-2 border-[#FF0000] space-y-3 rounded-md p-4 flex-1">
-              <span className="text-lg font-bold text-[#FF0000]">01</span>
-              <h2 className="text-[#FF0000] text-xl font-semibold">
-                Mobile Team
-              </h2>
-              <p>
-                We bring our trainers, workout technology and equipment to you,
-                making every workout private, customized and convenient.
-              </p>
+          <div className="mt-10 space-y-10 lg:space-y-0">
+            {/* First row */}
+            <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 justify-center items-stretch mb-10">
+              <div className="border-2 border-[#FF0000] space-y-3 rounded-md p-4 flex-1">
+                <span className="text-lg font-bold text-[#FF0000]">01</span>
+                <h2 className="text-[#FF0000] text-xl font-semibold">
+                  Mobile Team
+                </h2>
+                <p>
+                  We bring our trainers, workout technology and equipment to you,
+                  making every workout private, customized and convenient.
+                </p>
+              </div>
+              <div className="border-2 border-[#FF0000] space-y-3 rounded-md p-4 flex-1">
+                <span className="text-lg font-bold text-[#FF0000]">02</span>
+                <h2 className="text-[#FF0000] text-xl font-semibold">
+                  Bespoke Experience
+                </h2>
+                <p>
+                  We make every workout fun, goal-oriented and customized for your
+                  age, fitness level, health condition, or group size.
+                </p>
+              </div>
             </div>
-            <div className="border-2 border-[#FF0000] space-y-3 rounded-md p-4 flex-1">
-              <span className="text-lg font-bold text-[#FF0000]">02</span>
-              <h2 className="text-[#FF0000] text-xl font-semibold">
-                Bespoke Experience
-              </h2>
-              <p>
-                We make every workout fun, goal-oriented and customized for your
-                age, fitness level, health condition, or group size.
-              </p>
+
+            {/* Second row */}
+            <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 justify-center items-stretch">
+              <div className="border-2 border-[#FF0000] space-y-3 rounded-md p-4 flex-1">
+                <span className="text-lg font-bold text-[#FF0000]">03</span>
+                <h2 className="text-[#FF0000] text-xl font-semibold">
+                  Advanced Technology
+                </h2>
+                <p>
+                  We enable you to experience fitness and health results that go
+                  beyond the scale and mirror with our 3D body visualization
+                  technology.
+                </p>
+              </div>
+              <div className="border-2 border-[#FF0000] space-y-3 rounded-md p-4 flex-1">
+                <span className="text-lg font-bold text-[#FF0000]">04</span>
+                <h2 className="text-[#FF0000] text-xl font-semibold">
+                  Satisfaction Guaranteed
+                </h2>
+                <p>
+                  Our gyms offer personalized training sessions with certified
+                  personal trainers who create customized workout plans based on
+                  individual goals.
+                </p>
+              </div>
             </div>
           </div>
+        </Section>
 
-          {/* Second row */}
-          <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 justify-center items-stretch">
-            <div className="border-2 border-[#FF0000] space-y-3 rounded-md p-4 flex-1">
-              <span className="text-lg font-bold text-[#FF0000]">03</span>
-              <h2 className="text-[#FF0000] text-xl font-semibold">
-                Advanced Technology
-              </h2>
-              <p>
-                We enable you to experience fitness and health results that go
-                beyond the scale and mirror with our 3D body visualization
-                technology.
-              </p>
-            </div>
-            <div className="border-2 border-[#FF0000] space-y-3 rounded-md p-4 flex-1">
-              <span className="text-lg font-bold text-[#FF0000]">04</span>
-              <h2 className="text-[#FF0000] text-xl font-semibold">
-                Satisfaction Guaranteed
-              </h2>
-              <p>
-                Our gyms offer personalized training sessions with certified
-                personal trainers who create customized workout plans based on
-                individual goals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+        <Section className="text-white py-14 px-6">
+          <h1 className="text-center text-5xl font-bold uppercase mb-12">
+            Mobile App
+            <br />
+            <span className="text-[#FF0000]">For Workout</span>
+          </h1>
 
-      {/* Third section */}
-      <div className="bg-[#121212] text-white py-14 px-6"
-      >
-        <h1 className="text-center text-5xl font-bold uppercase mb-12">
-          Mobile App
-          <br />
-          <span className="text-[#FF0000]">For Workout</span>
-        </h1>
-
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-48">
-          {/*Mobile pictures*/}
-          <div className="flex flex-row relative w-fit">
-            <Image
-              Imageurl="/src/assets/home/photo_2025-05-03_15-56-18-removebg-preview.png"
-              alt="fitness app"
-              className="w-40 md:w-56 lg:w-48 rounded-xl shadow-xl z-10"
-            />
-            <Image
-              Imageurl="/src/assets/home/photo_2025-05-03_15-56-52-removebg-preview.png"
-              alt="fitness app"
-              className="w-40 md:w-56 lg:w-48 rounded-xl shadow-xl mt-12 -ml-3"
-            />
-          </div>
-
-          {/*App features*/}
-          <div className="max-w-md space-y-6">
-            <ul className="space-y-3 text-lg">
-              {[
-                "24X7 Support from our trainers",
-                "Professional Approach",
-                "Scientifically Proven Workout Plans",
-                "Personalised Workout Plans",
-                "iOS, Android App and Web Portal",
-                "Exercise Video Add-ons",
-              ].map((feature, i) => (
-                <li key={i} className="flex items-start gap-2">
-                  <span className="text-[#FF0000] mt-1">●</span>
-                  <span>{feature}</span>
-                </li>
-              ))}
-            </ul>
-
-            <Button className="mt-6 px-6 py-3 text-[#FF0000] border-2 border-[#FF0000] rounded hover:bg-[#FF0000] hover:text-white transition-all duration-500 font-semibold uppercase tracking-wider">
-              Try Now
-            </Button>
-          </div>
-        </div>
-      </div>
-
-      {/* Fourth section */}
-      <div className="bg-[#121212] text-white py-28 px-4 sm:px-6 md:px-10 lg:px-24 justify-center sm:justify-center justify-items-center sm:justify-items-center"
-      >
-        <h1 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold">
-          Our <span className="text-[#FF0000]">Services</span>
-        </h1>
-        <p className="text-center mt-4 sm:mt-6 text-sm sm:text-base">
-          Delivered By Highly Trained Fitness and Health Professionals
-        </p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-10">
-          {serviceData.map((data, indx) => (
-            <div key={indx} className="w-full h-full">
-              <HomeCard
-                imageurl={data.image}
-                description={data.description}
-                title={data.title}
-                className="w-full h-full bg-cover"
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-48">
+            {/*Mobile pictures*/}
+            <div className="flex flex-row relative w-fit">
+              <Image
+                Imageurl="/src/assets/home/photo_2025-05-03_15-56-18-removebg-preview.png"
+                alt="fitness app"
+                className="w-40 md:w-56 lg:w-48 rounded-xl shadow-xl z-10"
+              />
+              <Image
+                Imageurl="/src/assets/home/photo_2025-05-03_15-56-52-removebg-preview.png"
+                alt="fitness app"
+                className="w-40 md:w-56 lg:w-48 rounded-xl shadow-xl mt-12 -ml-3"
               />
             </div>
-          ))}
-        </div>
-      </div>
 
-      {/* Fifth section */}
-      <div className="bg-[#121212] text-white py-28 px-6 justify-center sm:justify-center justify-items-center sm:justify-items-center"
-      >
-        <h1 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold">
-          Our professional <span className="text-[#FF0000]">trainers</span>
-        </h1>
-        <p className="text-center mt-6 text-sm sm:text-base">
-          Delivered By Highly Trained Fitness and Health Professionals
-        </p>
+            {/*App features*/}
+            <div className="max-w-md space-y-6">
+              <ul className="space-y-3 text-lg">
+                {[
+                  "24X7 Support from our trainers",
+                  "Professional Approach",
+                  "Scientifically Proven Workout Plans",
+                  "Personalised Workout Plans",
+                  "iOS, Android App and Web Portal",
+                  "Exercise Video Add-ons",
+                ].map((feature, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="text-[#FF0000] mt-1">●</span>
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mt-10">
-          {profissionalData.map((data, indx) => (
-            <div key={indx} className="w-full sm:w-2/3 md:w-1/2 lg:w-auto">
-              <HomeProfitional Name={data.Name} imageurl={data.imageurl} />
+              <Button className="mt-6 px-6 py-3 text-[#FF0000] border-2 border-[#FF0000] rounded hover:bg-[#FF0000] hover:text-white transition-all duration-500 font-semibold uppercase tracking-wider">
+                Try Now
+              </Button>
             </div>
-          ))}
-        </div>
-      </div>
+          </div>
+        </Section>
 
-      {/* sixth section */}
-      {/* seventh section */}
+        <Section className="text-white py-28 px-4 sm:px-6 md:px-10 lg:px-24">
+          <h1 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold">
+            Our <span className="text-[#FF0000]">Services</span>
+          </h1>
+          <p className="text-center mt-4 sm:mt-6 text-sm sm:text-base">
+            Delivered By Highly Trained Fitness and Health Professionals
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-10">
+            {serviceData.map((data, indx) => (
+              <div key={indx} className="w-full h-full">
+                <HomeCard
+                  imageurl={data.image}
+                  description={data.description}
+                  title={data.title}
+                  className="w-full h-full bg-cover"
+                />
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        <Section className="text-white py-28 px-6">
+          <h1 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold">
+            Our professional <span className="text-[#FF0000]">trainers</span>
+          </h1>
+          <p className="text-center mt-6 text-sm sm:text-base">
+            Delivered By Highly Trained Fitness and Health Professionals
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mt-10">
+            {profissionalData.map((data, indx) => (
+              <div key={indx} className="w-full sm:w-2/3 md:w-1/2 lg:w-auto">
+                <HomeProfitional Name={data.Name} imageurl={data.imageurl} />
+              </div>
+            ))}
+          </div>
+        </Section>
+      </div>
     </div>
   );
 };
