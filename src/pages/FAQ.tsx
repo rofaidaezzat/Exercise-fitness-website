@@ -9,7 +9,15 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      duration: 600,
+      once: true,
+      startEvent: 'DOMContentLoaded',
+      disable: 'mobile',
+      offset: 50,
+      delay: 0,
+      easing: 'ease-out'
+    });
   }, []);
 
   const faqs = [
@@ -48,61 +56,63 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="bg-[#121212] min-h-screen">
-      <Section className="text-white py-16 px-6 md:px-12 lg:px-24">
-        <h1 
-          data-aos="fade-down"
-          className="text-center text-3xl sm:text-4xl md:text-5xl font-bold mb-12"
-        >
-          Frequently Asked <span className="text-[#FF0000]">Questions</span>
-        </h1>
+    <div className="bg-[#121212] min-h-screen pt-16">
+      <Section className="text-white py-12 px-6 md:px-12 lg:px-24">
+        <div className="max-w-4xl mx-auto">
+          <h1 
+            data-aos="fade-down"
+            className="text-center text-4xl sm:text-5xl md:text-6xl font-bold mb-12"
+          >
+            Frequently Asked <span className="text-[#FF0000]">Questions</span>
+          </h1>
 
-        <div className="max-w-4xl mx-auto space-y-4">
-          {faqs.map((faq, index) => (
-            <div 
-              key={index}
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
-              className="bg-[#1a1a1a] rounded-lg overflow-hidden"
-            >
-              <button
-                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-[#2a2a2a] transition-colors duration-300"
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
-              >
-                <span className="text-lg font-medium">{faq.question}</span>
-                <ChevronDown 
-                  className={`w-6 h-6 transition-transform duration-300 ${
-                    openIndex === index ? 'transform rotate-180' : ''
-                  }`}
-                />
-              </button>
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
               <div 
-                className={`px-6 transition-all duration-300 ${
-                  openIndex === index ? 'max-h-96 py-4' : 'max-h-0'
-                } overflow-hidden`}
+                key={index}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+                className="bg-[#1a1a1a] rounded-lg overflow-hidden"
               >
-                <p className="text-gray-300 leading-relaxed">
-                  {faq.answer}
-                </p>
+                <button
+                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-[#2a2a2a] transition-colors duration-300"
+                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                >
+                  <span className="text-lg font-medium">{faq.question}</span>
+                  <ChevronDown 
+                    className={`w-6 h-6 transition-transform duration-300 ${
+                      openIndex === index ? 'transform rotate-180' : ''
+                    }`}
+                  />
+                </button>
+                <div 
+                  className={`px-6 transition-all duration-300 ${
+                    openIndex === index ? 'max-h-96 py-4' : 'max-h-0'
+                  } overflow-hidden`}
+                >
+                  <p className="text-gray-300 leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        {/* Contact Section */}
-        <div 
-          data-aos="fade-up"
-          className="mt-16 bg-[#1a1a1a] rounded-lg p-8 text-center"
-        >
-          <h2 className="text-2xl font-bold mb-4">Still Have Questions?</h2>
-          <p className="text-gray-300 mb-6">
-            Can't find the answer you're looking for? Please chat to our friendly team.
-          </p>
-          <Link to="/contactus">
-            <button className="px-6 py-2 bg-[#FF0000] text-white rounded-lg hover:bg-red-700 transition-colors duration-300">
-              Contact Us
-            </button>
-          </Link>
+          {/* Contact Section */}
+          <div 
+            data-aos="fade-up"
+            className="mt-16 bg-[#1a1a1a] rounded-lg p-8 text-center"
+          >
+            <h2 className="text-2xl font-bold mb-4">Still Have Questions?</h2>
+            <p className="text-gray-300 mb-6">
+              Can't find the answer you're looking for? Please chat to our friendly team.
+            </p>
+            <Link to="/contactus">
+              <button className="px-6 py-2 bg-[#FF0000] text-white rounded-lg hover:bg-red-700 transition-colors duration-300">
+                Contact Us
+              </button>
+            </Link>
+          </div>
         </div>
       </Section>
     </div>
