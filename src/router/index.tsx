@@ -17,7 +17,7 @@ import ProtectedRoute from "../auth/ProtectedRoute";
 import Calories from "../pages/Calories";
 import PrivacyPolicy from "../pages/Privacy_Policy";
 import Blog from "../pages/blog";
-import CookiesPolicy from "../pages/Cookies_Policy";
+import CookiesPolicy from "../pages/cookies_policy";
 import FAQ from "../pages/FAQ";
 import TermsConditions from "../pages/Terms_Conditions";
 
