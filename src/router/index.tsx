@@ -15,9 +15,16 @@ import ResetPass from "../pages/Forget&ResetPass/ResetPass";
 import ForgetPass from "../pages/Forget&ResetPass/ForgetPass";
 import ProtectedRoute from "../auth/ProtectedRoute";
 import Calories from "../pages/Calories";
+import PrivacyPolicy from "../pages/Privacy_Policy";
+import Blog from "../pages/blog";
+import CookiesPolicy from "../pages/Cookies_Policy";
+import FAQ from "../pages/FAQ";
+import TermsConditions from "../pages/Terms_Conditions";
+
 const storageKey = "loggedInUser";
 const userDataString = localStorage.getItem(storageKey);
 const userData = userDataString ? JSON.parse(userDataString) : null;
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
@@ -31,7 +38,11 @@ const router = createBrowserRouter(
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="ResetPass" element={<ResetPass />} />
         <Route path="ForgetPass" element={<ForgetPass />} />
-
+        <Route path="PrivacyPolicy" element={<PrivacyPolicy />} />
+        <Route path="blog" element={<Blog />} />
+        <Route path="cookies-policy" element={<CookiesPolicy />} />
+        <Route path="faq" element={<FAQ />} />
+        <Route path="terms-conditions" element={<TermsConditions />} />
         <Route
           path="exercises"
           element={
