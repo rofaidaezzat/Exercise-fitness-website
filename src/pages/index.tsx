@@ -90,7 +90,7 @@ const Home = () => {
           data-aos-delay="200"
           className="flex-1 flex justify-center overflow-hidden"
         >
-          <div className="w-[250px] sm:w-[350px] md:w-[450px] lg:w-[500px] h-auto transform hover:scale-110 transition-all duration-300 origin-center">
+          <div className="w-[250px] sm:w-[350px] md:w-[450px] lg:w-[500px] h-auto transform scale-110 transition-all duration-300 origin-center">
             <img
               className="w-full h-full object-contain"
               src="src/assets/home/home-bg.png"
