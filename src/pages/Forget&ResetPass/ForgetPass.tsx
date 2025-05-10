@@ -12,7 +12,7 @@ const ForgotPass = () => {
                 type="email"
                 name="email"
                 id="email"
-                className="w-full rounded-md border border-black outline-none px-4 py-3 text-gray-100 bg-transparent placeholder:text-gray-400 focus:bg-transparent focus:border-black"
+                className="bg-white/30 w-full rounded-md border border-gray-700 outline-none px-4 py-3 text-gray-100 placeholder-white"
                 placeholder="example@email.com"
               />
               <div className="flex justify-end text-xs text-gray-400 mt-2 mb-3">

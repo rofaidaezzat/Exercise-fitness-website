@@ -22,9 +22,9 @@ const ContactUs = () => {
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="font-bold text-3xl text-white flex justify-center items-center mb-10 text-center"
+        className="text-center text-white sm:text-5xl md:text-6xl font-bold mb-12"
       >
-        Talk to us about anything you want to tell us.
+        Contact <span className="text-[#FF0000]">Us</span>
       </motion.h3>
       <motion.div 
         initial={{ y: 50, opacity: 0 }}

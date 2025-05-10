@@ -128,7 +128,7 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink to="/about" onClick={() => setIsOpen(false)}>
-                About Us
+                About
               </NavLink>
             </li>
             <li>
@@ -142,7 +142,7 @@ const Navbar = () => {
           <div className="flex flex-col items-center space-y-3 py-4">
             <Link
               to="login"
-              className="px-4 py-2 border-2 border-white rounded-lg text-center w-20"
+              className="px-4 py-2 border-2 border-white rounded-lg text-center w-25"
             >
               Login
             </Link>

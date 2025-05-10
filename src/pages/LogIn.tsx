@@ -102,7 +102,7 @@ const LogIn = () => {
               type="text"
               name="identifier"
               id="identifier"
-              className="w-full rounded-md border border-black outline-none px-4 py-3 text-gray-100 bg-transparent placeholder:text-gray-400 focus:bg-transparent focus:border-black focus:text-gray-100"
+              className="bg-white/30 w-full rounded-md border border-gray-700 outline-none px-4 py-3 text-gray-100 placeholder-white"
               placeholder="Email"
               value={data.identifier}
               onChange={onchangeHandler}
@@ -130,7 +130,7 @@ const LogIn = () => {
               type="password"
               name="password"
               id="password"
-              className="w-full rounded-md border border-black outline-none px-4 py-3 text-gray-100 bg-transparent focus:bg-transparent focus:border-black"
+              className="bg-white/30 w-full rounded-md border border-gray-700 outline-none px-4 py-3 text-gray-100 placeholder-white"
               placeholder="Password"
               value={data.password}
               onChange={onchangeHandler}
@@ -167,7 +167,7 @@ const LogIn = () => {
               className="bg-red-600 text-white w-[150px] h-[40px] rounded-full font-semibold flex items-center justify-center"
               disabled={isLoading}
             >
-              {isLoading ? "Logging in..." : "Log In"}
+              {isLoading ? "Logging in..." : "Login"}
             </motion.button>
           </motion.div>
         </form>
