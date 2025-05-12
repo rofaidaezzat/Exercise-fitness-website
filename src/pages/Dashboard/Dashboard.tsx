@@ -515,7 +515,7 @@ const FitnessDashboard = () => {
       {/* Add Task Modal */}
       {isModalOpen && isAuthenticated && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-[#1E1E1E] p-4 md:p-6 rounded-xl w-full max-w-[600px] max-h-[80vh] overflow-y-auto">
+           <div className="bg-[#1E1E1E] p-6 rounded-xl w-[600px] max-h-[80vh] overflow-y-auto">
             <h3 className="text-lg md:text-xl font-bold text-white mb-4">Add New Task</h3>
             
             {/* Custom Task Input */}
