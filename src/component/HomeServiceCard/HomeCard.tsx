@@ -1,4 +1,3 @@
-import React from "react";
 import "./HomeCard.css";
 import Image from "../../UI/Image";
 import Button from "../../UI/Button";
