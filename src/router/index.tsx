@@ -17,14 +17,10 @@ import ForgetPass from "../pages/Forget&ResetPass/ForgetPass";
 import ProtectedRoute from "../auth/ProtectedRoute";
 import Calories from "../pages/Calories";
 import PrivacyPolicy from "../pages/Privacy_Policy";
-
 import CookiesPolicy from "../pages/cookies_policy";
 import FAQ from "../pages/FAQ";
-
 import Blogg from "../pages/blog";
-
 import TermsConditions from "../pages/Terms_Conditions";
-
 
 const storageKey = "loggedInUser";
 const userDataString = localStorage.getItem(storageKey);
@@ -37,19 +33,41 @@ const router = createBrowserRouter(
         <Route index element={<Home />} />
         <Route path="contactus" element={<ContactUs />} />
         <Route path="aboutus" element={<AboutUs />} />
-        <Route path="calories" element={<Calories/>} />
         <Route path="login" element={<LogIn />} />
         <Route path="signup" element={<SignUp />} />
-        <Route path="dashboard" element={<Dashboard />} />
         <Route path="ResetPass" element={<ResetPass />} />
         <Route path="ForgetPass" element={<ForgetPass />} />
         <Route path="PrivacyPolicy" element={<PrivacyPolicy />} />
         <Route path="blog" element={<Blogg />} />
         <Route path="cookies-policy" element={<CookiesPolicy />} />
         <Route path="faq" element={<FAQ />} />
-
         <Route path="terms-conditions" element={<TermsConditions />} />
         
+        {/* Protected Routes */}
+        <Route
+          path="dashboard"
+          element={
+            <ProtectedRoute
+              isAllowed={!!userData?.jwt}
+              redirectPath="/login"
+              data={userData}
+            >
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="calories"
+          element={
+            <ProtectedRoute
+              isAllowed={!!userData?.jwt}
+              redirectPath="/login"
+              data={userData}
+            >
+              <Calories />
+            </ProtectedRoute>
+          }
+        />
         <Route
           path="exercises"
           element={
