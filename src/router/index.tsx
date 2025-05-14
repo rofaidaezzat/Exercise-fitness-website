@@ -10,6 +10,7 @@ import AboutUs from "../pages/Aboutus/AboutUs";
 import LogIn from "../pages/LogIn";
 import SignUp from "../pages/SignUp";
 import Exercise from "../pages/Exercise";
+import ExerciseDetail from "../pages/ExerciseDetail";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import ResetPass from "../pages/Forget&ResetPass/ResetPass";
 import ForgetPass from "../pages/Forget&ResetPass/ForgetPass";
@@ -58,6 +59,18 @@ const router = createBrowserRouter(
               data={userData}
             >
               <Exercise />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="exercise/:id"
+          element={
+            <ProtectedRoute
+              isAllowed={!!userData?.jwt}
+              redirectPath="/login"
+              data={userData}
+            >
+              <ExerciseDetail />
             </ProtectedRoute>
           }
         />
