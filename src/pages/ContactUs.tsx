@@ -3,6 +3,12 @@ import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+// Import images
+import contactImg from '../assets/contact/contact.png';
+import whatsIcon from '../assets/contact/whatsicon.png';
+import callIcon from '../assets/contact/callicon.png';
+import locationIcon from '../assets/contact/locationicon.png';
+
 const ContactUs = () => {
   useEffect(() => {
     AOS.init({
@@ -42,7 +48,7 @@ const ContactUs = () => {
           <motion.img 
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
-            src="src/assets/contact/contact.png" 
+            src={contactImg} 
             alt="contact" 
           />
           <motion.h2 
@@ -72,8 +78,8 @@ const ContactUs = () => {
             className="flex flex-row w-full self-start gap-3 mt-20 lg:ml-5"
           >
             <img
-              src="src/assets/contact/whatsicon.png"
-              alt=""
+              src={whatsIcon}
+              alt="WhatsApp"
               className="w-6 h-6"
             />
             <p className="font-semibold">+20 111 222 3333</p>
@@ -86,8 +92,8 @@ const ContactUs = () => {
             className="flex flex-row w-full self-start gap-3 mt-3 lg:ml-5 text-wrap"
           >
             <img
-              src="src/assets/contact/callicon.png"
-              alt=""
+              src={callIcon}
+              alt="Call"
               className="w-6 h-6"
             />
             <p className="font-semibold">info.fitnessexercise@gmail.com</p>
@@ -100,8 +106,8 @@ const ContactUs = () => {
             className="flex flex-row w-full self-start gap-3 mt-3 lg:ml-5"
           >
             <img
-              src="src/assets/contact/locationicon.png"
-              alt=""
+              src={locationIcon}
+              alt="Location"
               className="w-6 h-6"
             />
             <p className="font-semibold">Alexandria, Egypt</p>

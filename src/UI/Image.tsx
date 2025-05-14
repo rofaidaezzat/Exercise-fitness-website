@@ -3,6 +3,7 @@ interface Iprops {
   alt: string;
   className?: string;
 }
+
 const Image = ({ Imageurl, alt, className }: Iprops) => {
   return <img src={Imageurl} alt={alt} className={className} />;
 };

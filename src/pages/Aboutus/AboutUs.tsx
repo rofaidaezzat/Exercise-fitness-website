@@ -3,6 +3,14 @@ import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+// Import images
+import aboutBackground from '../../assets/aboutus/about-background.webp';
+import essamImg from '../../assets/aboutus/essam.jpg';
+import faresImg from '../../assets/aboutus/fares.jpeg';
+import omarImg from '../../assets/aboutus/omar.jpeg';
+import rofaidaImg from '../../assets/aboutus/rofaida.jpeg';
+import nohaImg from '../../assets/aboutus/noha.jpeg';
+
 const AboutUs = () => {
   useEffect(() => {
     AOS.init({
@@ -16,8 +24,8 @@ const AboutUs = () => {
       {/* image */}
       <div className="relative image-container">
         <img
-          src="src/assets/aboutus/about-background.webp"
-          alt=""
+          src={aboutBackground}
+          alt="About Us Background"
           className="w-full h-[800px] object-cover opacity-40 pt-11 sm:pt-8 md:pt-8 lg:pt-0"
           data-aos="fade-down"
         />
@@ -64,11 +72,11 @@ const AboutUs = () => {
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 sm:gap-10 md:gap-16 lg:gap-20 xl:gap-36 place-items-center mt-6 pb-5">
           {[
-            { name: 'Mohamed', img: 'src/assets/aboutus/essam.jpg' },
-            { name: 'Fares', img: 'src/assets/aboutus/fares.jpeg' },
-            { name: 'Omar', img: 'src/assets/aboutus/omar.jpeg' },
-            { name: 'Rofaida', img: 'src/assets/aboutus/rofaida.jpeg' },
-            { name: 'Noha', img: 'src/assets/aboutus/noha.jpeg' },
+            { name: 'Mohamed', img: essamImg },
+            { name: 'Fares', img: faresImg },
+            { name: 'Omar', img: omarImg },
+            { name: 'Rofaida', img: rofaidaImg },
+            { name: 'Noha', img: nohaImg },
           ].map((member, index) => (
             <div className="card" key={index} data-aos="zoom-in" data-aos-delay={index * 100}>
               <div className="card-content text-center">

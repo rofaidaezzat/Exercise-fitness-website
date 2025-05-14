@@ -2,7 +2,11 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 
-
+// Import images
+import exerciseBeginner from '../assets/blog/exercise-beginner.png';
+import nutrition from '../assets/blog/nutrition.jpeg';
+import restDay from '../assets/blog/rest-day.jpg';
+import motivation from '../assets/blog/motivation.jpeg';
 
 const Blog = () => {
 
@@ -23,7 +27,7 @@ const Blog = () => {
     {/* CARD 1 */}
     <div data-aos="fade-up-left" className="flex flex-col h-full bg-white dark:bg-transparent rounded-2xl shadow-sm border-2 border-transparent overflow-hidden">
       <a href="#">
-        <img className="w-full h-72 object-cover" src="/src/assets/blog/exercise-beginner.png" alt="Blog preview" />
+        <img className="w-full h-72 object-cover" src={exerciseBeginner} alt="Blog preview" />
       </a>
       <div className="flex flex-col justify-between flex-grow p-5 bg-[#201f1f]">
         <div>
@@ -49,7 +53,7 @@ const Blog = () => {
     {/* CARD 2 */}
     <div data-aos="fade-up-left" className="flex flex-col h-full bg-white dark:bg-transparent rounded-2xl shadow-sm border-2 border-transparent overflow-hidden">
       <a href="#">
-        <img className="w-full h-72 object-cover" src="/src/assets/blog/nutrition.jpeg" alt="Blog preview" />
+        <img className="w-full h-72 object-cover" src={nutrition} alt="Blog preview" />
       </a>
       <div className="flex flex-col justify-between flex-grow p-5 bg-[#201f1f]">
         <div>
@@ -75,7 +79,7 @@ const Blog = () => {
     {/* CARD 3 */}
     <div data-aos="fade-up-right" className="flex flex-col h-full bg-white dark:bg-transparent rounded-2xl shadow-sm border-2 border-transparent overflow-hidden">
       <a href="#">
-        <img className="w-full h-72 object-cover" src="/src/assets/blog/rest-day.jpg" alt="Blog preview" />
+        <img className="w-full h-72 object-cover" src={restDay} alt="Blog preview" />
       </a>
       <div className="flex flex-col justify-between flex-grow p-5 bg-[#201f1f]">
         <div>
@@ -101,7 +105,7 @@ const Blog = () => {
     {/* CARD 4 */}
     <div data-aos="fade-up-right" className="flex flex-col h-full bg-white dark:bg-transparent rounded-2xl shadow-sm border-2 border-transparent overflow-hidden">
       <a href="#">
-        <img className="w-full h-72 object-cover" src="/src/assets/blog/motivation.jpeg" alt="Blog preview" />
+        <img className="w-full h-72 object-cover" src={motivation} alt="Blog preview" />
       </a>
       <div className="flex flex-col justify-between flex-grow p-5 bg-[#201f1f]">
         <div>

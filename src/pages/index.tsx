@@ -9,6 +9,11 @@ import Button from "../UI/Button";
 import Image from "../UI/Image";
 import Section from "../UI/Section";
 
+// Import images
+import homeBg from '../assets/home/home-bg.png';
+import mobileApp1 from '../assets/home/photo_2025-05-03_15-56-18-removebg-preview.png';
+import mobileApp2 from '../assets/home/photo_2025-05-03_15-56-52-removebg-preview.png';
+
 const Home = () => {
 
   useEffect(() => {
@@ -93,7 +98,7 @@ const Home = () => {
           <div className="w-[250px] sm:w-[350px] md:w-[450px] lg:w-[500px] h-auto transform scale-110 transition-all duration-300 origin-center">
             <img
               className="w-full h-full object-contain"
-              src="src/assets/home/home-bg.png"
+              src={homeBg}
               alt="Fitness Professional"
             />
           </div>
@@ -210,12 +215,12 @@ const Home = () => {
               className="flex flex-row relative w-fit"
             >
               <Image
-                Imageurl="/src/assets/home/photo_2025-05-03_15-56-18-removebg-preview.png"
+                Imageurl={mobileApp1}
                 alt="fitness app"
                 className="w-40 md:w-56 lg:w-48 rounded-xl shadow-xl z-10 transform hover:scale-105 transition-all duration-300"
               />
               <Image
-                Imageurl="/src/assets/home/photo_2025-05-03_15-56-52-removebg-preview.png"
+                Imageurl={mobileApp2}
                 alt="fitness app"
                 className="w-40 md:w-56 lg:w-48 rounded-xl shadow-xl mt-12 -ml-3 transform hover:scale-105 transition-all duration-300"
               />

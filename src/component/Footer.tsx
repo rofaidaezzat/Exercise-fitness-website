@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Icon from "./IconContactus/Icon";
+import footerVideo from '../assets/Footer/ssstik.io_1746356639803.mp4';
 // import Icon from "./IconContactus/Icon";
 
 const Footer = () => {
@@ -14,7 +15,7 @@ const Footer = () => {
         className="absolute top-0 left-0 w-full h-full object-cover -z-20"
       >
         <source
-          src="/src/assets/Footer/ssstik.io_1746356639803.mp4"
+          src={footerVideo}
           type="video/mp4"
         />
         Your browser does not support the video tag.

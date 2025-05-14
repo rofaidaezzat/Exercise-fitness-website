@@ -1,35 +1,35 @@
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-
-import img1 from "/src/assets/exercise/5ad6fd0df4bbe9f545e6ce464b4dc61f.jpg";
-import img2 from "/src/assets/exercise/7d0a7c14c8289b783389c9baa0ef5b02.jpg";
-import img3 from "/src/assets/exercise/5955b8d60d579de614a6192ebce1f9fc.jpg";
-
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "../UI/Image";
 
+// Import images
+import slide1 from '../assets/exercise/slide1.jpg';
+import slide2 from '../assets/exercise/slide2.jpg';
+import slide3 from '../assets/exercise/slide3.jpg';
+
 const HeaderExercise = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+
   const images = [
     {
-      src: img1,
-      title: "Strength Starts Here",
+      src: slide1,
+      title: "Transform Your Body",
       description:
-        "Unlock your full potential with powerful workouts that build strength, endurance, and confidence.",
+        "Get ready to embark on a journey of physical transformation with our comprehensive exercise programs.",
     },
     {
-      src: img2,
-      title: "Train Smarter, Live Better",
+      src: slide2,
+      title: "Expert Guidance",
       description:
-        "With modern fitness tools and personalized plans, your health journey becomes more effective and enjoyable.",
+        "Our certified trainers will help you achieve your fitness goals with personalized workout plans.",
     },
     {
-      src: img3,
-      title: "Stronger Together",
+      src: slide3,
+      title: "State-of-the-Art Equipment",
       description:
-        "Whether in the gym or at home, training with others builds motivation, accountability, and lasting results.",
+        "Access to premium fitness equipment and facilities to maximize your workout potential.",
     },
   ];
-
-  const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
