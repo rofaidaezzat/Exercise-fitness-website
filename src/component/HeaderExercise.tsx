@@ -36,7 +36,7 @@ const HeaderExercise = () => {
       setCurrentImage((prev) => (prev + 1) % images.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   return (
     <div className="relative w-full lg:h-[600px] md:h-[450px] h-[300px] overflow-hidden">
