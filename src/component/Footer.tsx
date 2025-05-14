@@ -75,6 +75,9 @@ const Footer = () => {
                 <Link to="/blog">Blog</Link>
               </li>
               <li className="hover:text-gray-400 duration-500">
+                <Link to="/blogg">Blogg</Link>
+              </li>
+              <li className="hover:text-gray-400 duration-500">
                 <Link to="/cookies-policy">Cookies Policy</Link>
               </li>
               <li className="hover:text-gray-400 duration-500">
