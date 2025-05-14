@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "../UI/Image";
 
 // Import images
-import slide1 from '../assets/exercise/slide1.jpg';
-import slide2 from '../assets/exercise/slide2.jpg';
-import slide3 from '../assets/exercise/slide3.jpg';
+import slide1 from '../assets/exercise/5ad6fd0df4bbe9f545e6ce464b4dc61f.jpg';
+import slide2 from '../assets/exercise/7d0a7c14c8289b783389c9baa0ef5b02.jpg';
+import slide3 from '../assets/exercise/5955b8d60d579de614a6192ebce1f9fc.jpg';
 
 const HeaderExercise = () => {
   const [currentImage, setCurrentImage] = useState(0);
