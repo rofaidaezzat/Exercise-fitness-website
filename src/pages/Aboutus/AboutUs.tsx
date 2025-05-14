@@ -18,7 +18,7 @@ const AboutUs = () => {
         <img
           src="src/assets/aboutus/about-background.webp"
           alt=""
-          className="w-full h-auto object-cover opacity-40 pt-11 sm:pt-8 md:pt-8 lg:pt-0"
+          className="w-full h-[800px] object-cover opacity-40 pt-11 sm:pt-8 md:pt-8 lg:pt-0"
           data-aos="fade-down"
         />
         <div className="absolute inset-0 flex items-center justify-center text-center bg-black bg-opacity-30">

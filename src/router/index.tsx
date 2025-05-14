@@ -19,7 +19,9 @@ import PrivacyPolicy from "../pages/Privacy_Policy";
 
 import CookiesPolicy from "../pages/cookies_policy";
 import FAQ from "../pages/FAQ";
+
 import Blogg from "../pages/blog";
+
 import TermsConditions from "../pages/Terms_Conditions";
 
 
@@ -44,6 +46,7 @@ const router = createBrowserRouter(
         <Route path="blog" element={<Blogg />} />
         <Route path="cookies-policy" element={<CookiesPolicy />} />
         <Route path="faq" element={<FAQ />} />
+
         <Route path="terms-conditions" element={<TermsConditions />} />
         
         <Route

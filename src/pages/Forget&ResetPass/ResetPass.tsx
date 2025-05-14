@@ -2,7 +2,7 @@ const ResetPass = () => {
     return (
       <div className="bg-[url('src/assets/authentication/signup.jpg')] bg-cover bg-center w-full h-screen flex justify-center items-center">
         <div className="w-[400px] h-[500px] rounded-xl p-8 text-gray-100 bg-[#D9D9D94D]">
-          <p className="text-center text-2xl font-bold mb-6">Reset Password</p>
+          <p className="text-center text-3xl font-bold mb-6">Reset Password</p>
           <form className="mt-4">
             <div className="text-sm leading-5">
               <label htmlFor="new-password" className="block text-gray-400 mb-1">
