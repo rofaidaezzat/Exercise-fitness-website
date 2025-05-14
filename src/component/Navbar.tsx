@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 
 import { CircleUserRound } from "lucide-react";
 import { FaDumbbell } from "react-icons/fa";
+import { FaUserCircle } from "react-icons/fa";
 import ProfileMenuModal from "./ProfileMenu";
 
 const Navbar = () => {
@@ -59,9 +60,21 @@ const Navbar = () => {
               <div className="relative">
                 <button 
                   onClick={() => setIsOpenModal(!isOpenModal)}
-                  className="p-2 hover:bg-red-600/30 rounded-full transition-colors"
+                  className="p-2 hover:bg-red-600/30 rounded-full transition-all duration-300 transform hover:scale-110 group"
                 >
-                  <CircleUserRound size={28} />
+                  <div className="relative">
+                    <FaUserCircle 
+                      size={32} 
+                      className="text-white group-hover:text-red-200 transition-colors duration-300" 
+                    />
+                    {userData.profileImage ? (
+                      <img 
+                        src={userData.profileImage} 
+                        alt="Profile" 
+                        className="absolute inset-0 w-full h-full rounded-full object-cover"
+                      />
+                    ) : null}
+                  </div>
                 </button>
                 {isOpenModal && (
                   <div className="absolute right-0 mt-1 z-50">
@@ -162,9 +175,9 @@ const Navbar = () => {
                   setIsOpenModal(!isOpenModal);
                   setIsOpen(false);
                 }}
-                className="flex items-center justify-center space-x-2 bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg transition-colors w-full"
+                className="flex items-center justify-center space-x-2 bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105"
               >
-                <CircleUserRound size={20} />
+                <FaUserCircle size={24} className="text-white" />
                 <span>Profile</span>
               </button>
             </div>

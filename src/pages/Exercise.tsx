@@ -131,22 +131,16 @@ const Exercise = () => {
 
       {/* Body Parts */}
       <div className="px-4 sm:px-7 pb-16">
-        <div className="relative py-10">
+        <div className="relative py-10 flex justify-center items-center">
           <button
             onClick={() => scroll("left")}
-            className="absolute left-2 top-1/2 z-20 transform -translate-y-1/2 bg-red-600 hover:bg-red-700 text-white p-2 sm:p-4 rounded-full shadow-lg transition-all duration-300"
+            className="absolute left-0 top-1/2 z-20 transform -translate-y-1/2 bg-red-600 hover:bg-red-700 text-white p-2 sm:p-4 rounded-full shadow-lg transition-all duration-300"
           >
             <FaChevronLeft size={16} className="sm:w-5 sm:h-5" />
           </button>
-          <button
-            onClick={() => scroll("right")}
-            className="absolute right-2 top-1/2 z-20 transform -translate-y-1/2 bg-red-600 hover:bg-red-700 text-white p-2 sm:p-4 rounded-full shadow-lg transition-all duration-300"
-          >
-            <FaChevronRight size={16} className="sm:w-5 sm:h-5" />
-          </button>
           <div
             ref={scrollContainerRef}
-            className="flex overflow-x-scroll space-x-4 sm:space-x-6 scroll-smooth snap-x snap-mandatory px-8 sm:px-16 hide-scrollbar"
+            className="flex overflow-x-scroll space-x-4 sm:space-x-6 scroll-smooth snap-x snap-mandatory w-[80%] mx-auto hide-scrollbar"
           >
             {bodyPartsLoading ? (
               <BodyPartSkeleton />
@@ -164,6 +158,12 @@ const Exercise = () => {
               ))
             )}
           </div>
+          <button
+            onClick={() => scroll("right")}
+            className="absolute right-0 top-1/2 z-20 transform -translate-y-1/2 bg-red-600 hover:bg-red-700 text-white p-2 sm:p-4 rounded-full shadow-lg transition-all duration-300"
+          >
+            <FaChevronRight size={16} className="sm:w-5 sm:h-5" />
+          </button>
         </div>
 
         {/* Exercises */}
