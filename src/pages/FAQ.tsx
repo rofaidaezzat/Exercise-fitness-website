@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+
 type FAQ = {
   question: string;
   answer: string;
@@ -46,10 +48,11 @@ const faqs: FAQ[] = [
 ];
 
 const FAQ: React.FC = () => {
+  const navigate = useNavigate();
   useEffect(() => {
     AOS.init({
-      duration: 1000, // animation duration in ms
-      once: true,     // whether animation should happen only once
+      duration: 1000,
+      once: true,
     });
   }, []);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -59,21 +62,24 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <div className="bg-black mt-10 text-white min-h-screen flex items-center justify-center px-4 py-12">
+    <div className="bg-zinc-900 mt-10 min-h-screen flex items-center justify-center px-4 py-12">
       <div className="w-full max-w-2xl">
-        <h2 data-aos="fade-down" className="text-5xl font-bold text-center mb-16">
+        <h2 data-aos="fade-down" className="text-5xl font-bold text-center mb-16 pt-5 text-white">
           Frequently Asked <span className="text-red-600">Questions</span>
         </h2>
 
-        <div  data-aos="fade-up"  className="space-y-4">
+        <div data-aos="fade-up" className="space-y-4">
           {faqs.map((faq, index) => (
             <div
-            data-aos="fade-up" data-aos-delay="300"
+              data-aos="fade-up"
+              data-aos-delay="300"
               key={index}
-              className="bg-zinc-900 rounded-md shadow-md p-4 cursor-pointer"
+              className="bg-black rounded-md shadow-md p-4 cursor-pointer hover:shadow-lg transition-shadow duration-300"
               onClick={() => toggleFAQ(index)}
             >
-              <div data-aos="fade-up" data-aos-delay="300" className="font-semibold">{faq.question}</div>
+              <div data-aos="fade-up" data-aos-delay="300" className="font-semibold text-white">
+                {faq.question}
+              </div>
               <AnimatePresence initial={false}>
                 {openIndex === index && (
                   <motion.div
@@ -82,27 +88,30 @@ const FAQ: React.FC = () => {
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="overflow-hidden mt-2 text-sm text-zinc-300"
+                    className="overflow-hidden mt-2 text-sm text-gray-400"
                   >
-                    <div data-aos="fade-left" data-aos-easing="ease" >{faq.answer}</div>
+                    <div data-aos="fade-left" data-aos-easing="ease">{faq.answer}</div>
                   </motion.div>
                 )}
               </AnimatePresence>
             </div>
           ))}
         </div>
-      <div data-aos="fade-up"  className="flex flex-col text-center gap-[20px] mt-20 p-5 rounded-md bg-zinc-900" >
-        <h3 className="text-3xl font-semibold">Still Have <span className="text-red-600">Questions?</span></h3>
-        <p>Can't find the answer you're looking for? Please chat to our friendly team.</p>
-        <div className="flex justify-center">
-  <button
-    type="button"
-    className="w-36 focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
-  >
-    Contact Us
-  </button>
-</div>
-      </div>
+        <div data-aos="fade-up" className="flex flex-col text-center gap-[20px] mt-20 p-5 rounded-md bg-black shadow-md">
+          <h3 className="text-3xl font-semibold text-white">
+            Still Have <span className="text-red-600">Questions?</span>
+          </h3>
+          <p className="text-gray-400">Can't find the answer you're looking for? Please chat to our friendly team.</p>
+          <div className="flex justify-center">
+            <button
+              type="button"
+              onClick={() => navigate('/contactus')}
+              className="w-36 focus:outline-none text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 transition-colors duration-300"
+            >
+              Contact Us
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

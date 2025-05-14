@@ -64,11 +64,11 @@ const AboutUs = () => {
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 sm:gap-10 md:gap-16 lg:gap-20 xl:gap-36 place-items-center mt-6 pb-5">
           {[
-            { name: 'Mohamed', img: 'src/assets/aboutus/WhatsApp Image 2023-12-21 at 17.03.15_b3a58753.jpg' },
-            { name: 'Fares', img: 'src/assets/aboutus/fares aboutus.jpg' },
-            { name: 'Omar', img: 'src/assets/aboutus/WhatsApp Image 2023-12-21 at 17.03.15_b3a58753.jpg' },
-            { name: 'Rofaida', img: 'src/assets/aboutus/WhatsApp Image 2023-12-21 at 17.03.15_b3a58753.jpg' },
-            { name: 'Noha', img: 'src/assets/aboutus/WhatsApp Image 2023-12-21 at 17.03.15_b3a58753.jpg' },
+            { name: 'Mohamed', img: 'src/assets/aboutus/essam.jpg' },
+            { name: 'Fares', img: 'src/assets/aboutus/fares.jpeg' },
+            { name: 'Omar', img: 'src/assets/aboutus/omar.jpeg' },
+            { name: 'Rofaida', img: 'src/assets/aboutus/rofaida.jpeg' },
+            { name: 'Noha', img: 'src/assets/aboutus/noha.jpeg' },
           ].map((member, index) => (
             <div className="card" key={index} data-aos="zoom-in" data-aos-delay={index * 100}>
               <div className="card-content text-center">
