@@ -4,6 +4,7 @@ import { useState } from "react";
 import { SignupValidation } from "../validation";
 import { axiosInstance } from "../config/axios.config";
 import { motion } from "framer-motion";
+import signupBg from '../assets/authentication/signup.jpg';
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -68,7 +69,8 @@ const SignUp = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="bg-[url('src/assets/authentication/signup.jpg')] bg-cover bg-center w-full h-screen flex justify-center items-center"
+      style={{ backgroundImage: `url(${signupBg})` }}
+      className="bg-cover bg-center w-full h-screen flex justify-center items-center"
     >
       <motion.div 
         initial={{ y: -50, opacity: 0 }}
