@@ -20,7 +20,7 @@
     box-shadow: 0 10px 20px rgba(255, 0, 0, 0.808); /* Glow effect on hover */
   }
   
-  /* Background gradient rotation */
+  /* Background gradient rotation spining the background el square */
   .card::before {
     content: '';
     position: absolute;
@@ -38,7 +38,7 @@
     transform: translate(-50%, -50%) rotate(360deg);
   }
   
-  /* Inner card overlay */
+  /* Inner card overlay  el 2 lines ely foo2 homa 3obara 3n square bs zindex -1*/ 
   .card::after {
     content: '';
     position: absolute;
@@ -48,7 +48,7 @@
     z-index: -1;
   }
   
-  /* Content styling (unchanged) */
+  /*  Holds the Actual Content */
   .card-content {
     display: flex;
     flex-direction: column;

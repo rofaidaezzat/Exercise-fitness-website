@@ -55,10 +55,10 @@ const FAQ: React.FC = () => {
       once: true,
     });
   }, []);
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(null); //"It tracks which FAQ is currently open — by storing its index or null if none are open." ✅//
 
   const toggleFAQ = (index: number) => {
-    setOpenIndex(prev => (prev === index ? null : index));
+    setOpenIndex(prev => (prev === index ? null : index)); //"It opens the clicked FAQ if it’s closed — or closes it if it’s already open."//
   };
 
   return (
@@ -80,13 +80,13 @@ const FAQ: React.FC = () => {
               <div data-aos="fade-up" data-aos-delay="300" className="font-semibold text-white">
                 {faq.question}
               </div>
-              <AnimatePresence initial={false}>
+              <AnimatePresence initial={false}>  {/**lw kant true el mfrood enha kant t3ml render llfirst faq automaticly bs 3lshan el code dh: const [openIndex, setOpenIndex] = useState<number | null>(null) dh bydy el openindex=null y3ny closed initialy fa mfeesh haga mftoo7a 3lshan yt3mlha render fahem; */}
                 {openIndex === index && (
-                  <motion.div
+                  <motion.div             //framer motion library//
                     key="content"
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
+                    initial={{ height: 0, opacity: 0 }} //hidden//
+                    animate={{ height: "auto", opacity: 1 }} /**visible */
+                    exit={{ height: 0, opacity: 0 }} /**colapse again */
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden mt-2 text-sm text-gray-400"
                   >
