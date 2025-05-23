@@ -4,7 +4,7 @@ import { useState } from "react";
 import { SignupValidation } from "../validation";
 import { axiosInstance } from "../config/axios.config";
 import { motion } from "framer-motion";
-import signupBg from '../assets/authentication/signup.jpg';
+import signupBg from "../assets/authentication/signup.jpg";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -26,7 +26,6 @@ const SignUp = () => {
     setData((prev) => ({ ...prev, [name]: value }));
     setErrors((prev) => ({ ...prev, [name]: "" }));
   };
-
   const submitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const validationErrors = SignupValidation(data);
@@ -65,20 +64,20 @@ const SignUp = () => {
   };
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       style={{ backgroundImage: `url(${signupBg})` }}
       className="bg-cover bg-center w-full h-screen flex justify-center items-center"
     >
-      <motion.div 
+      <motion.div
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
         className="w-[400px] h-[500px] rounded-xl p-8 text-gray-100 bg-white/30"
       >
-        <motion.p 
+        <motion.p
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
@@ -87,7 +86,7 @@ const SignUp = () => {
           Sign Up
         </motion.p>
         <form className="mt-3" onSubmit={submitHandler}>
-          <motion.div 
+          <motion.div
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.6 }}
@@ -106,7 +105,7 @@ const SignUp = () => {
               onChange={onchangeHandler}
             />
             {errors.username && (
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 className="text-red-500 text-xs mt-1"
@@ -116,7 +115,7 @@ const SignUp = () => {
             )}
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.7 }}
@@ -135,7 +134,7 @@ const SignUp = () => {
               onChange={onchangeHandler}
             />
             {errors.email && (
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 className="text-red-500 text-xs mt-1"
@@ -145,7 +144,7 @@ const SignUp = () => {
             )}
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.8 }}
@@ -164,7 +163,7 @@ const SignUp = () => {
               onChange={onchangeHandler}
             />
             {errors.password && (
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 className="text-red-500 text-xs mt-1"
@@ -174,7 +173,7 @@ const SignUp = () => {
             )}
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.9 }}
@@ -190,7 +189,7 @@ const SignUp = () => {
           </motion.div>
         </form>
 
-        <motion.div 
+        <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 1 }}
@@ -203,7 +202,7 @@ const SignUp = () => {
           <div className="flex-1 h-px bg-gray-700" />
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 1.1 }}
@@ -255,7 +254,7 @@ const SignUp = () => {
           </motion.button>
         </motion.div>
 
-        <motion.p 
+        <motion.p
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 1.2 }}
