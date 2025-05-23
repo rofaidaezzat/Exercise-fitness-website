@@ -1,18 +1,18 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { LogInValidation } from "../validation";
-import { axiosInstance } from "../config/axios.config";
+import { supabase } from "../config/supabaseClient";
 import { motion } from "framer-motion";
 import signupBg from '../assets/authentication/signup.jpg';
 
 const LogIn = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [errors, setErrors] = useState({
-    identifier: "",
+    email: "",
     password: "",
   });
   const [data, setData] = useState({
-    identifier: "",
+    email: "",
     password: "",
   });
 
@@ -35,12 +35,17 @@ const LogIn = () => {
 
     setIsLoading(true);
     try {
-      const { status, data: responseData } = await axiosInstance.post(
-        "/auth/local",
-        data
-      );
-      console.log(responseData);
-      if (status === 200) {
+      const { data: signInData, error } = await supabase.auth.signInWithPassword({
+        email: data.email,
+        password: data.password,
+      });
+      if (error) {
+        if (error.message === "Email not confirmed" || error.code === "email_not_confirmed") {
+          toast.error("Please confirm your email address first. Check your inbox for a confirmation email.", { position: "bottom-center" });
+        } else {
+          toast.error(error.message, { position: "bottom-center" });
+        }
+      } else if (signInData.user) {
         toast.success("Login successful! Redirecting to Home...", {
           position: "bottom-center",
           duration: 1500,
@@ -50,16 +55,12 @@ const LogIn = () => {
             width: "fit-content",
           },
         });
-        {
-          /*loggedInUser =>name of key will saved  */
-        }
-        localStorage.setItem("loggedInUser", JSON.stringify(responseData)); // kda ana bkhazen eldata elly rag3a men el reponse
+        localStorage.setItem("loggedInUser", JSON.stringify(signInData.user));
         setTimeout(() => {
           location.replace("/");
         }, 1000);
       }
     } catch (error) {
-      console.error("Login error:", error);
       toast.error("Login failed. Please check your credentials.", {
         position: "bottom-center",
       });
@@ -97,25 +98,25 @@ const LogIn = () => {
             transition={{ duration: 0.5, delay: 0.6 }}
             className="mt-1 text-sm leading-5"
           >
-            <label htmlFor="identifier" className="block text-gray-400 mb-1">
+            <label htmlFor="email" className="block text-gray-400 mb-1">
               Email
             </label>
             <input
               type="text"
-              name="identifier"
-              id="identifier"
+              name="email"
+              id="email"
               className="bg-white/30 w-full rounded-md border border-gray-700 outline-none px-4 py-3 text-gray-100 placeholder-white"
               placeholder="Email"
-              value={data.identifier}
+              value={data.email}
               onChange={onchangeHandler}
             />
-            {errors.identifier && (
+            {errors.email && (
               <motion.p 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 className="text-red-500 text-xs mt-1"
               >
-                {errors.identifier}
+                {errors.email}
               </motion.p>
             )}
           </motion.div>

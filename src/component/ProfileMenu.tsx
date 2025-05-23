@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { LogOut } from "lucide-react";
+import { supabase } from "../config/supabaseClient";
 
 type IProfileMenuModalProps = {
   isOpen: boolean;
@@ -12,7 +13,8 @@ const ProfileMenuModal = ({ isOpen, onClose }: IProfileMenuModalProps) => {
   const userDataString = localStorage.getItem(storageKey);
   const userData = userDataString ? JSON.parse(userDataString) : null;
 
-  const onlogout = () => {
+  const onlogout = async () => {
+    await supabase.auth.signOut();
     localStorage.removeItem(storageKey);
     setTimeout(() => {
       location.replace(pathname);

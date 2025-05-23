@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { useState } from "react";
 import { SignupValidation } from "../validation";
-import { axiosInstance } from "../config/axios.config";
+import { supabase } from "../config/supabaseClient";
 import { motion } from "framer-motion";
 import signupBg from "../assets/authentication/signup.jpg";
 
@@ -38,8 +38,16 @@ const SignUp = () => {
 
     setIsLoading(true);
     try {
-      const { status } = await axiosInstance.post("auth/local/register", data);
-      if (status === 200) {
+      const { data: signUpData, error } = await supabase.auth.signUp({
+        email: data.email,
+        password: data.password,
+        options: {
+          data: { username: data.username },
+        },
+      });
+      if (error) {
+        toast.error(error.message, { position: "bottom-center" });
+      } else if (signUpData.user) {
         toast.success(
           "You will navigate to the login page after 1 seconds to login",
           {
@@ -52,12 +60,13 @@ const SignUp = () => {
             },
           }
         );
+        localStorage.setItem("loggedInUser", JSON.stringify(signUpData.user));
         setTimeout(() => {
           navigate("/login");
         }, 1000);
       }
-    } catch {
-      console.log("error");
+    } catch (err) {
+      toast.error("Sign up failed.", { position: "bottom-center" });
     } finally {
       setIsLoading(false);
     }

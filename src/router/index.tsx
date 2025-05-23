@@ -48,7 +48,7 @@ const router = createBrowserRouter(
           path="dashboard"
           element={
             <ProtectedRoute
-              isAllowed={!!userData?.jwt}
+              isAllowed={!!userData}
               redirectPath="/login"
               data={userData}
             >
@@ -60,7 +60,7 @@ const router = createBrowserRouter(
           path="calories"
           element={
             <ProtectedRoute
-              isAllowed={!!userData?.jwt}
+              isAllowed={!!userData}
               redirectPath="/login"
               data={userData}
             >
@@ -72,7 +72,7 @@ const router = createBrowserRouter(
           path="exercises"
           element={
             <ProtectedRoute
-              isAllowed={!!userData?.jwt}
+              isAllowed={!!userData}
               redirectPath="/login"
               data={userData}
             >
@@ -84,7 +84,7 @@ const router = createBrowserRouter(
           path="exercise/:id"
           element={
             <ProtectedRoute
-              isAllowed={!!userData?.jwt}
+              isAllowed={!!userData}
               redirectPath="/login"
               data={userData}
             >

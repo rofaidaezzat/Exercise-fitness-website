@@ -36,19 +36,19 @@ export const SignupValidation = (signup: {
   };
   
   export const LogInValidation = (login: {
-    identifier: string;
+    email: string;
     password: string;
   }) => {
-    const errors: { identifier: string; password: string } = {
-        identifier: "",
+    const errors: { email: string; password: string } = {
+      email: "",
       password: "",
     };
   
     // Email validation
-    if (!login.identifier.trim()) {
-      errors.identifier = "Email is required";
-    } else if (login.identifier.length < 10 || login.identifier.length > 200) {
-      errors.identifier = "Email must be between 10 and 200 characters";
+    if (!login.email.trim()) {
+      errors.email = "Email is required";
+    } else if (login.email.length < 10 || login.email.length > 200) {
+      errors.email = "Email must be between 10 and 200 characters";
     }
   
     // Password validation
