@@ -14,7 +14,7 @@ export const SignupValidation = (signup: {
     // Username validation
     if (!signup.username.trim()) {
       errors.username = "Username is required";
-    } else if (signup.username.length < 10 || signup.username.length > 30) {
+    } else if (signup.username.length < 2 || signup.username.length > 30) {
       errors.username = "Username must be between 10 and 30 characters";
     }
   
